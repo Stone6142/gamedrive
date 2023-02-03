@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Game Drive 2048 6x6</title>
+  <link rel="stylesheet" href="../sidebar.css">
+
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport"
+    content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<div class="main">
+
+  <body style="background-color: #808080">
+    <div class="container">
+      <div class="heading">
+        <h1 class="title" style="color:#F7F7FF;">Game Drive 2048 Variant</h1>
+        <div class="scores-container">
+          <div class="score-container">0</div>
+          <div class="best-container">0</div>
+        </div>
+      </div>
+      <p class="game-intro" style="color:#F7F7FF;">Join the numbers and get as high as you can!</p>
+
+      <div class="game-container">
+        <div class="game-message">
+          <p></p>
+          <div class="lower">
+            <a class="keep-playing-button">Keep going</a>
+            <a class="retry-button">Try again</a>
+          </div>
+        </div>
+
+        <div class="grid-container">
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+        </div>
+
+        <div class="tile-container">
+
+        </div>
+      </div>
+
+      <p class="game-explanation" style="color:#F7F7FF;">
+        <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two
+        tiles with the same number touch, they <strong>merge into one!</strong>
+      </p>
+      <p style="color:#F7F7FF;">
+        <strong class="important">Remade by Skyler B</strong>
+      </p>
+      <hr>
+    </div>
+
+    <script src="js/animframe_polyfill.js"></script>
+    <script src="js/keyboard_input_manager.js"></script>
+    <script src="js/html_actuator.js"></script>
+    <script src="js/grid.js"></script>
+    <script src="js/tile.js"></script>
+    <script src="js/local_score_manager.js"></script>
+    <script src="js/game_manager.js"></script>
+    <script src="js/application.js"></script>
+  </body>
+</div>
+
+</html>
+<div class="sidenav">
+  <a href="../../">Dashboard</a>
+  <a href="../../broken/"><strong>Broken</strong></a>
+  <a href="../../downloads/">Downloads</a>
+  <a href="../../tools/">Tools</a>
+  <a href="https://docs.google.com/document/d/1uBznNAbuVtK9Wl2lWTup7WhFuLdnNVY7EapjC0f6CFU/edit?usp=sharing">Info</a>
+  <a href="../../chat">Chat</a>
+  <a href="../../extra/challenges">Extra Crap</a>
+</div>

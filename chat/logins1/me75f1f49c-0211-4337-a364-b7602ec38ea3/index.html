@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+  <link rel="stylesheet" href="../../style.css">
+  <!--<script type='text/javascript' src='http://0.0.0.0:8080/scaledrone.js'></script>-->
+  <title>Game Drive Chat</title>
+  <link rel="icon" type="./image/png" sizes="256x256" href="../../../img/logo3.png">
+  <div class="main">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <style>
+      body {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 13px;
+        display: flex;
+        flex-direction: column;
+        max-height: 100vh;
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+
+      .members-count,
+      .members-list,
+      .messages {
+        border: 1px solid #e4e4e4;
+        padding: 15px;
+        margin-bottom: 15px;
+      }
+
+      .messages {
+        flex-shrink: 1;
+        overflow: auto;
+      }
+
+      .message {
+        padding: 5px 0;
+      }
+
+      .message .member {
+        display: inline-block;
+      }
+
+      .member {
+        padding-right: 10px;
+        position: relative;
+      }
+
+      .message-form {
+        display: flex;
+        flex-shrink: 0;
+      }
+
+      .message-form__input {
+        flex-grow: 1;
+        border: 1px solid #dfdfdf;
+        padding: 10px 15px;
+        font-size: 16px;
+      }
+
+      .message-form__button {
+        margin: 10px;
+      }
+    </style>
+</head>
+
+<body>
+  <strong>
+    <div class="members-count">-</div>
+  </strong>
+  <strong>
+    <div class="members-list">-</div>
+  </strong>
+  <strong>
+    <div class="messages"></div>
+  </strong>
+  <form class="message-form" onsubmit="return false;">
+    <input class="message-form__input" placeholder="Type a message.." type="text" />
+    <input class="message-form__button" value="Send" type="submit" />
+  </form>
+  </div>
+  <script src="sky.js"></script>
+
+</body>
+
+</html>
+
+<div class="sidenav">
+  <a href="../../..">Dashboard</a>
+  <a href="../../../broken/">Broken</a>
+  <a href="../../../downloads/">Downloads</a>
+  <a href="../../../tools/">Tools</a>
+  <a href="https://docs.google.com/document/d/1uBznNAbuVtK9Wl2lWTup7WhFuLdnNVY7EapjC0f6CFU/edit?usp=sharing">Info</a>
+  <a href="../../../chat/"><strong>Chat</strong></a>
+  <a href="../../../chat/login/"><strong>Chat Login</strong></a>
+  <a href="https://GameMeet.stone-6142.repl.co"><strong>Video Chat</strong></a>
+</div>

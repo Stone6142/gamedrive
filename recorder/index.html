@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Game Drive Downloads</title>
+  <link rel="icon" type="image/png" sizes="256x256" href="../../img/logo2.png">
+</head>
+<style>
+  .button {
+    border: none;
+    color: white;
+    padding: 12px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 310px;
+    border-radius: 15px;
+  }
+
+  .button1 {
+    background-color: #434750;
+    color: #999;
+    border: 2px solid #434750;
+  }
+
+  .button1:hover {
+    background-color: #434750;
+    color: #33a3ee;
+  }
+
+  #myUL {
+    padding: 0;
+    margin: 0;
+  }
+</style>
+<!--begining of crappy/jank code-->
+
+  <body style="background-color: #808080">
+
+  </body>
+
+  <ul id="myUL" style="list-style: none">
+    <button id="start" class="button button1" style="color:#F7F7FF;">Improve my code</button>
+    <button id="stop" class="button button1" style="color:#F7F7FF;">End</button>
+<script>
+  const fs = require('fs')
+  
+   let start = document.getElementById('start'),
+    stop  = document.getElementById('stop'),
+    mediaRecorder;
+
+start.addEventListener('click', async function(){
+    let stream = await recordScreen();
+    let mimeType = 'video/webm';
+    mediaRecorder = createRecorder(stream, mimeType);
+  let node = document.createElement("p");
+    node.textContent = "Started recording";
+    document.body.appendChild(node);
+})
+
+stop.addEventListener('click', function(){
+    mediaRecorder.stop();
+    let node = document.createElement("p");
+    node.textContent = "Stopped recording";
+    document.body.appendChild(node);
+})
+
+async function recordScreen() {
+    return await navigator.mediaDevices.getDisplayMedia({
+        audio: true, 
+        video: { mediaSource: "screen"}
+    });
+}
+
+function createRecorder (stream, mimeType) {
+  // the stream data is stored in this array
+  let recordedChunks = []; 
+
+  const mediaRecorder = new MediaRecorder(stream);
+
+  mediaRecorder.ondataavailable = function (e) {
+    if (e.data.size > 0) {
+      recordedChunks.push(e.data);
+    }  
+  };
+  mediaRecorder.onstop = function () {
+     saveFile(recordedChunks);
+     recordedChunks = [];
+  };
+  mediaRecorder.start(200); // For every 200ms the stream data will be stored in a separate chunk.
+  return mediaRecorder;
+}
+
+function saveFile(recordedChunks){
+
+   const blob = new Blob(recordedChunks, {
+      type: 'video/webm'
+    });
+    let filename = window.prompt('Enter file name'),
+    downloadLink = document.createElement('a');
+    downloadLink.href = URL.createObjectURL(blob);
+    downloadLink.download = `${filename}.webm`;
+    
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    console.log(downloadLink);
+    URL.revokeObjectURL(blob); // clear from memory
+    document.body.removeChild(downloadLink);
+}
+</script>
+  </ul>
+</html>

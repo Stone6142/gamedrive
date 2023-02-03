@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Undefined</title>
+</head>
+<body>
+<script type='text/javascript' src='website.js'></script>
+<video id="video" class="video" src="video.mp4" loop="true" muted autoplay></video>
+</body>
+</html>
+<script type="text/javascript">
+  window.addEventListener("load", afterLoaded1,false);
+  function afterLoaded1(){
+    new Audio('./video.mp3').play();
+  }
+</script>
