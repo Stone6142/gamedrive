@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Game Drive Sudoku Game</title>
+  <link href="sudoku-icon.png" rel="icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link href="./CSSstyles/mybootstrap.css" rel="stylesheet">
+  <link href="./CSSstyles/social-media-panel.css" rel="stylesheet">
+  <link href="./CSSstyles/digital-timer.css" rel="stylesheet">
+  <link href="./CSSstyles/progress-bar.css" rel="stylesheet">
+  <link href="./CSSstyles/animated-countdown-timer.css" rel="stylesheet">
+  <link href="./CSSstyles/snackbar-and-alert.css" rel="stylesheet">
+  <link href="./CSSstyles/theme-toggle-button.css" rel="stylesheet">
+  <link href="./CSSstyles/styles.css" rel="stylesheet">
+  <link href="../sidebar.css" rel="stylesheet">
+</head>
+<div class="main">
+
+  <body>
+    <header class="center-screen">
+      <div class="header light">
+        <div class="inner-header flex">
+          <h1>Welcome to My <span style="color:blue">S</span><span style="color:red">u</span><span
+              style="color:orange">d</span><span style="color:black">o</span><span style="color:cyan">k</span><span
+              style="color:indigo">u</span> Puzzle Game!</h1>
+          <div id="theme-btn-container">
+            <input type="checkbox" name="theme-btn" id="theme-btn">
+            <label for="theme-btn">
+              <span class="box">
+                <span class="ball"></span>
+                <span class="scenary">
+                  <span class="moon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="feather feather-moon">
+                      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                  </span>
+                  <span class="sun">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="feather feather-sun">
+                      <circle cx="12" cy="12" r="5"></circle>
+                      <line x1="12" y1="1" x2="12" y2="3"></line>
+                      <line x1="12" y1="21" x2="12" y2="23"></line>
+                      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                      <line x1="1" y1="12" x2="3" y2="12"></line>
+                      <line x1="21" y1="12" x2="23" y2="12"></line>
+                      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                  </span>
+                </span>
+              </span>
+            </label>
+          </div>
+        </div>
+        <!--Waves Container-->
+        <div>
+          <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+              <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+              <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+            </g>
+          </svg>
+        </div>
+      </div>
+      <table class="center-screen"
+        style="max-width: 100%; border-spacing: 50px 0; padding-top: 10px; padding-bottom: 30px;">
+        <tr>
+          <td style="text-align: center; font-size: 24px; padding-bottom: 3px;">Choose difficulty</td>
+          <td style="text-align: center; font-size: 24px; padding-bottom: 3px;">Choose time</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">
+            <div class="btn-group" role="group">
+              <input type="radio" class="btn-check" id="difficulty-easy" name="diff" value="easy" autocomplete="off"
+                checked>
+              <label class="btn btn-outline-primary" for="difficulty-easy">
+                <i class="fas fa-dice-one"></i> Easy
+              </label>
+
+              <input type="radio" class="btn-check" id="difficulty-medium" name="diff" value="medium"
+                autocomplete="off">
+              <label class="btn btn-outline-primary" for="difficulty-medium">
+                <i class="fas fa-dice-two"></i> Medium
+              </label>
+
+              <input type="radio" class="btn-check" id="difficulty-hard" name="diff" value="hard" autocomplete="off">
+              <label class="btn btn-outline-primary" for="difficulty-hard">
+                <i class="fas fa-dice-three"></i> Hard
+              </label>
+
+              <input type="radio" class="btn-check" id="difficulty-veryhard" name="diff" value="veryhard"
+                autocomplete="off">
+              <label class="btn btn-outline-primary" for="difficulty-veryhard">
+                <i class="fas fa-dice-four"></i> Very Hard
+              </label>
+            </div>
+          </td>
+          <td style="text-align: center">
+            <div class="btn-group" role="group">
+              <input type="radio" class="btn-check" id="time-3mins" name="time" value="three" autocomplete="off"
+                checked>
+              <label class="btn btn-outline-primary" for="time-3mins">
+                <i class="fas fa-hourglass-start"></i> 3 mins
+              </label>
+
+              <input type="radio" class="btn-check" id="time-5mins" name="time" value="five" autocomplete="off">
+              <label class="btn btn-outline-primary" for="time-5mins">
+                <i class="fas fa-hourglass-start"></i> 5 mins
+              </label>
+
+              <input type="radio" class="btn-check" id="time-10mins" name="time" value="ten" autocomplete="off">
+              <label class="btn btn-outline-primary" for="time-10mins">
+                <i class="fas fa-hourglass-start"></i> 10 mins
+              </label>
+
+              <input type="radio" class="btn-check" id="time-stopwatch" name="time" value="stopwatch"
+                autocomplete="off">
+              <label class="btn btn-outline-primary" for="time-stopwatch">
+                <i class="fas fa-stopwatch"></i> Stopwatch
+              </label>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <button type="button" id="start-btn" class="mybutton">New game!</button>
+    </header>
+
+    <div align="center" id="spinner-container" class="hidden">
+      <div class="row">
+        <div id="spinner-element-1" class="spinner-border" style="margin-top: 35px; width: 4rem; height: 4rem;"
+          role="status"></div>
+      </div>
+      <br>
+      <div id="spinner-element-2" class="row" style="font-size: 20px;">
+        <strong>Loading puzzle...</strong>
+      </div>
+    </div>
+
+    <div id="game-container">
+      <div class="alert alert-warning center-screen hidden" id="alert-pause" role="alert">
+        <i class="far fa-pause-circle"></i> PAUSED
+      </div>
+
+      <div id="stats" class="center-screen">
+        <!-- Countdown timer -->
+        <div id="time-1">
+          <!-- Type 1 -->
+          <div id="animated-timer-container" class="hidden" style="margin-top: 35px"></div>
+          <!-- Type 2 -->
+          <div id="digital-timer-container" class="hidden" style="margin-top: 35px"></div>
+          <div id="progress-bar-container" class="hidden"></div>
+        </div>
+        <!-- Stopwatch -->
+        <div id="time-2">
+          <div id="stopwatch-container" class="hidden" style="margin-top: 35px"></div>
+        </div>
+        <p id="lives"></p>
+        <div class="snackbar" id="snackbar-win">You won!🏆</div>
+        <div class="snackbar" id="snackbar-lose">You lost!☹️</div>
+      </div>
+
+      <div id="game" class="center-screen">
+        <div id="board"></div>
+        <div id="number-container" class="hidden">
+          <p id="one">1</p>
+          <p id="two">2</p>
+          <p id="three">3</p>
+          <p id="four">4</p>
+          <p id="five">5</p>
+          <p id="six">6</p>
+          <p id="seven">7</p>
+          <p id="eight">8</p>
+          <p id="nine">9</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="myToast" style="position: absolute; top: 50%; right: 0;">
+      <div class="toast-header" style="font-size: 26px; background-color: #dfd8cf; color: black;">
+        <strong class="me-auto"><i class="fas fa-atom"></i> Tips</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+      </div>
+      <div class="toast-body" style="font-size: 24px; background-color: #dfd8cf; color: black;"></div>
+    </div>
+
+    <p>
+    <div class="center-screen">
+      <div class="btn-group" role="group">
+        <button type="button" id="tips-btn" class="btn btn-secondary btn-sm" disabled rel="tooltip"
+          title="Show all possible values for each empty cell." data-placement="bottom">
+          <i class="fas fa-atom"></i> Tips
+        </button>
+
+        <button type="button" id="solve-btn" class="btn btn-secondary btn-sm" disabled rel="tooltip"
+          title="Solve the current Sudoku puzzle." data-placement="bottom">
+          <i class="far fa-lightbulb"></i> Show solution
+        </button>
+
+        <button type="button" id="solve-one-step-btn" class="btn btn-secondary btn-sm" disabled rel="tooltip"
+          title="Solve one empty cell for the current Sudoku puzzle." data-placement="bottom">
+          <i class="fas fa-angle-double-right"></i> Solve one step
+        </button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" id="refresh-btn" class="btn btn-secondary btn-sm" disabled rel="tooltip"
+          title="Refresh the Sudoku board with the same difficulty." data-placement="bottom">
+          <i class="fas fa-sync"></i> Refresh puzzle
+        </button>
+
+        <button type="button" id="restart-btn" class="btn btn-secondary btn-sm" disabled rel="tooltip"
+          title="Restart the puzzle by clearing all cells you just tried to solve." data-placement="bottom">
+          <i class="fas fa-undo"></i> Restart puzzle
+        </button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" id="pause-btn" class="btn btn-secondary btn-sm" disabled>
+          <i class="fas fa-pause"></i> Pause
+        </button>
+
+        <button type="button" id="resume-btn" class="btn btn-secondary btn-sm" disabled>
+          <i class="fas fa-hourglass-half"></i> Resume
+        </button>
+      </div>
+    </div>
+    </p>
+
+    <hr style="width: 100%; margin-left: auto; margin-right: auto;">
+
+    <footer>
+      <p class="small text-center text-muted">Created by <a target="_blank" href="../../">Skyler Bothe</a>. &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </p>
+    </footer>
+
+    <div class="social-panel-container">
+      <div class="social-panel">
+        <p>
+          Created with <i class="fa fa-heart" id="heart"></i> by
+          <a target="_blank" href="../../">Skyler Bothe</a>
+        </p>
+        <button class="close-btn"><i class="fas fa-times"></i></button>
+        <h4>Reach me out on</h4>
+        <ul>
+          <li>
+            <a href="mailto:sb4549@k12.sd.us" target="_blank">
+              <i class="fas fa-at"></i>
+            </a>
+          </li>
+          <!-- <li>
+                    <a href="https://api.whatsapp.com/send?phone=491786042963&text=Hello!" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </li> -->
+        </ul>
+      </div>
+    </div>
+
+    <button class="floating-btn">
+      Get in Touch
+    </button>
+
+    <!-- JavaScript (Placed at the bottom of body tag so that the DOM could load faster) -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap Bundle JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=" anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./JSscripts/helperSudoku.js"></script>
+    <script src="./JSscripts/utilitySudoku.js"></script>
+    <script src="./JSscripts/solveSudoku.js"></script>
+    <script src="./JSscripts/generateSudoku.js"></script>
+    <script src="./JSscripts/candidatesSudoku.js"></script>
+    <script src="./JSscripts/stopwatch.js"></script>
+    <script src="./JSscripts/countdown-timer.js"></script>
+    <script src="./JSscripts/progress-bar.js"></script>
+    <script src="./JSscripts/app.js"></script>
+  </body>
+</div>
+
+</html>
+<div class="sidenav">
+  <a href="../../">Dashboard</a>
+  <a href="../../broken/"><strong>Broken</strong></a>
+  <a href="../../downloads/">Downloads</a>
+  <a href="../../tools/">Tools</a>
+  <a href="https://docs.google.com/document/d/1uBznNAbuVtK9Wl2lWTup7WhFuLdnNVY7EapjC0f6CFU/edit?usp=sharing">Info</a>
+  <a href="../../chat">Chat</a>
+  <a href="../../extra/challenges">Extra Crap</a>
+</div>
