@@ -201,6 +201,9 @@
             </ul>
         </div>
     </div>
+    <button class="floating-btn">
+	Get in Touch
+  </button>
   </ul>
 </div>
 
@@ -218,7 +221,19 @@
 
 </html>
 <script>
-  
+  const floating_btn = document.querySelector('.floating-btn');
+const close_btn = document.querySelector('.close-btn');
+const social_panel_container = document.querySelector(
+	'.social-panel-container'
+);
+
+floating_btn.addEventListener('click', () => {
+	social_panel_container.classList.toggle('visible');
+});
+
+close_btn.addEventListener('click', () => {
+	social_panel_container.classList.remove('visible');
+});
   function myFunction() {
     // Declare variables
     var input, filter, ul, li, a, i, txtValue;
