@@ -229,12 +229,13 @@ const social_panel_container = document.querySelector(
 
 floating_btn.addEventListener('click', () => {
 	social_panel_container.classList.toggle('visible');
+	document.getElementById('myImage').src=''
     	document.getElementById('lad').href = ""
 });
 
 close_btn.addEventListener('click', () => {
 	social_panel_container.classList.remove('visible');
-    	setTimeout(adf, 1000);
+    	
 });
   function myFunction() {
     // Declare variables
