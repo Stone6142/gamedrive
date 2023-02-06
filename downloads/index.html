@@ -229,6 +229,8 @@ const social_panel_container = document.querySelector(
 
 floating_btn.addEventListener('click', () => {
 	social_panel_container.classList.toggle('visible');
+	document.getElementById('myImage').src=''
+    	document.getElementById('lad').href = ""
 });
 
 close_btn.addEventListener('click', () => {
@@ -260,14 +262,12 @@ close_btn.addEventListener('click', () => {
   function adf() {
     document.getElementById('myImage').src='dourschoolwork.png'
     document.getElementById('lad').href = "https://brookings.instructure.com/"
-    document.getElementById('lad').target="_blank"
     setTimeout(adg, 10000)
     
   };
   function adg(){
     document.getElementById('myImage').src='adtest.png'
     document.getElementById('lad').href = "../price/"
-    document.getElementById('lad').target="_top"
     setTimeout(adf, 10000)
   };
 </script>
