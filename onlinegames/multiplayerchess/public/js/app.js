@@ -36,15 +36,15 @@ function onDragStart2(source, piece, position, orientation) {
   if (game.game_over()) {
     if (game.in_draw()) {
       alert('Game Draw!!');
-      window.open("./")
+      location.reload();
     }
     else if (game.in_checkmate())
       if (turnt === 1) {
         alert('You won the game!!');
-        window.open("./")
+        location.reload();
       } else {
         alert('You lost!!');
-        window.open("./")
+        location.reload();
       }
     return false
   }
@@ -59,7 +59,7 @@ function makeRandomMove() {
   // game over
   if (possibleMoves.length === 0) {
     alert('You won the game!!');
-    window.open("./")
+    location.reload();
     return;
   }
 
