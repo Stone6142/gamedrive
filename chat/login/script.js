@@ -1,3 +1,4 @@
+require('dotenv').config()
 var attempt = 3; // Variable to count number of attempts.
 const APIKey = process.env.PASSWORD;
 // Below function Executes on click of login button.
