@@ -241,10 +241,14 @@ floating_btn.addEventListener('click', () => {
 	social_panel_container.classList.toggle('visible');
 	document.getElementById('myImage').src=''
     	document.getElementById('lad').href = ""
+	document.getElementById('myImage').style.width = "0%";
+	document.getElementById('myImage').style.height = "auto";
 });
 
 close_btn.addEventListener('click', () => {
 	social_panel_container.classList.remove('visible');
+	document.getElementById('myImage').style.width = "100%";
+	document.getElementById('myImage').style.height = "auto";
     	
 });
   function myFunction() {
