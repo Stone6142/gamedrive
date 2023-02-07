@@ -247,8 +247,6 @@ floating_btn.addEventListener('click', () => {
 
 close_btn.addEventListener('click', () => {
 	social_panel_container.classList.remove('visible');
-	document.getElementById('myImage').style.width = "100%";
-	document.getElementById('myImage').style.height = "auto";
     	
 });
   function myFunction() {
@@ -277,12 +275,16 @@ close_btn.addEventListener('click', () => {
   function adf() {
     document.getElementById('myImage').src='dourschoolwork.png'
     document.getElementById('lad').href = "https://brookings.instructure.com/"
+	  document.getElementById('myImage').style.width = "100%";
+	document.getElementById('myImage').style.height = "auto";
     setTimeout(adg, 10000)
     
   };
   function adg(){
     document.getElementById('myImage').src='adtest.png'
     document.getElementById('lad').href = "../price/"
+	  document.getElementById('myImage').style.width = "100%";
+	document.getElementById('myImage').style.height = "auto";
     setTimeout(adf, 10000)
   };
 </script>
