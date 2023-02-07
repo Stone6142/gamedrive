@@ -10,8 +10,8 @@
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 200px; /* Set the width of the sidebar */
   position: fixed;
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+  z-index: -5; /* Stay on top */
+  top: -5; /* Stay at the top */
   right: 0;
 }
 /* The sidebar menu */
