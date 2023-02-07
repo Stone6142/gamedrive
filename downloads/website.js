@@ -1,4 +1,4 @@
-window.addEventListener("load", adf, false);
+
 document.addEventListener("keypress", function(event) {
   if (event.keyCode == 13) {
     openFullscreen();
