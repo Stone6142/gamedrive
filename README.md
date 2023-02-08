@@ -2,7 +2,7 @@
   <a href="https://github.com/Stone6142/gamedrive" title="Game Drive">
   </a>
 </p>
-<h1 align="center">🌟 <repo-title> 🌟</h1>
+<h1 align="center">🌟 Game Drive 🌟</h1>
 <p align="center">A little Project</p>
 
 <p align="center">
