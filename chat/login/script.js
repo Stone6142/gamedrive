@@ -4,7 +4,7 @@ var attempt = 3; // Variable to count number of attempts.
 function validate() {
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
-  if (username == "Skyler" && password == ${process.env.SB_PASS}) {
+  if (username == "Skyler" && password == `${process.env.SB_PASS}`) {
     alert("Login successfully");
     window.location = "../logins1/me75f1f49c-0211-4337-a364-b7602ec38ea3/"; // Redirecting to other page.
     return false;
