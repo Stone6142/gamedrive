@@ -1,0 +1,33 @@
+                            
+/* TEAM */
+
+                            
+Your title: Skyler Bothe
+
+                            
+Site: stone6142.github.io/gamedrive
+
+                            
+Location: Brookings, SD.						
+
+							
+/* THANKS */
+
+							
+Name: Everyone who has supported me by purchesing things
+                        
+
+                            
+/* SITE */
+
+                            
+Last update: 2023/02/08 
+
+                            
+Standards: HTML5, CSS, SCSS, JAVASCRIPT
+
+                            
+Components: N/A
+
+                            
+Software: Github
