@@ -265,19 +265,19 @@ close_btn.addEventListener('click', () => {
         li[i].style.display = "none";
       }
     }
-	 var randIdx = Math.random() * links.length;
+	 var randIdx = Math.random() * links1.length;
   	// round it, so it can be used as array index
   	randIdx = parseInt(randIdx, 10);
   	// construct the link to be opened
-  	var link = links[randIdx];
+  	var link1 = links[randIdx];
   	// open it in a new window / tab (depends on browser setting)
   	
 	if(filter === "EASTER EGG" || filter === "EASTEREGG"){
 	console.log("Easter Egg")
-	window.open(link, "_self");
+	window.open(link1, "_self");
 	}
   };
-  	var links = [
+  	var links1 = [
 		"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTA5-80Etyv0Z6c2UVG0CtZ2lQofYCtU_EzE-tryoQQzYuumpVjZ6gxojL5ruILbe6tNA:https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Bg-easter-eggs.jpg/1200px-Bg-easter-eggs.jpg&usqp=CAU",
 		"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTA5-80Etyv0Z6c2UVG0CtZ2lQofYCtU_EzE-tryoQQzYuumpVjZ6gxojL5ruILbe6tNA:https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Bg-easter-eggs.jpg/1200px-Bg-easter-eggs.jpg&usqp=CAU",
 		"https://www.youtube.com/watch?v=dQw4w9WgXcQ"
