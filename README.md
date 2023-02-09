@@ -24,7 +24,7 @@
 <a href="https://github.com/Stone6142/gamedrive" title="Repo Size">
 <img src="https://img.shields.io/github/repo-size/Stone6142/gamedrive?label=Repo%20Size&logo=Github&style=flat-square" alt="Game Drive Repo Size"/>
 </a>
-<a href="https://discord.gg/CJU4UNTaFt" title="Join Community">
+<a href="FIX" target="_blank" title="Join Community">
 <img src="https://img.shields.io/discord/737854816402800690?color=%236d82cb&label=Join%20Community&logo=discord&logoColor=%23FFFFFF&style=flat-square" alt="Join discord"/>
 </a>
 </p>
@@ -54,9 +54,9 @@
 <p align="center">💙 If you like this project, Give it a ⭐ and Share it with friends!</p>
 <p align="center">💰 Donations Links</p>
 <p align="center">
-<a href="https://www.buymeacoffee.com/Stone6142" title="Buy me a Pizza"><img src="./pizza1.png" alt="Buy me a Pizza" width="123" 
+<a href="https://www.buymeacoffee.com/Stone6142" target="_blank" title="Buy me a Pizza"><img src="./pizza1.png" alt="Buy me a Pizza" width="123" 
      height="29"/></a>
-<a href="https://www.patreon.com/Stone6142" title="Patreon"><img src="https://kingtechnologies.dev/assets/images/Patreon.png" alt="Patreon"/></a>
+<a href="https://www.patreon.com/Stone6142" target="_blank" title="Patreon"><img src="https://kingtechnologies.dev/assets/images/Patreon.png" alt="Patreon"/></a>
 </p>
 
 <p align="center">Made with Js, HTML, CSS, & ❤️</p>
