@@ -54,7 +54,8 @@
 <p align="center">💙 If you like this project, Give it a ⭐ and Share it with friends!</p>
 <p align="center">💰 Donations Links</p>
 <p align="center">
-<a href="https://www.buymeacoffee.com/Stone6142" title="Buy me a Pizza"><img src="./pizza.png" alt="Buy me a Pizza"/></a>
+<a href="https://www.buymeacoffee.com/Stone6142" title="Buy me a Pizza"><img src="./pizza.png" alt="Buy me a Pizza" width="300" 
+     height="100"/></a>
 <a href="https://www.patreon.com/Stone6142" title="Patreon"><img src="https://kingtechnologies.dev/assets/images/Patreon.png" alt="Patreon"/></a>
 </p>
 
