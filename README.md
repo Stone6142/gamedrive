@@ -60,4 +60,4 @@
 </p>
 
 <p align="center">Made with Js, HTML, CSS, & ❤️</p>
-](https://github.com/Stone6142/gamedrive/blob/master/LICENSE)
+]
