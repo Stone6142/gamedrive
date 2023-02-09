@@ -24,7 +24,7 @@
 <a href="https://github.com/Stone6142/gamedrive" title="Repo Size">
 <img src="https://img.shields.io/github/repo-size/Stone6142/gamedrive?label=Repo%20Size&logo=Github&style=flat-square" alt="Game Drive Repo Size"/>
 </a>
-<a href="FIX" target="_blank" title="Join Community">
+<a target="_blank" href="FIX" target="_blank" title="Join Community">
 <img src="https://img.shields.io/discord/737854816402800690?color=%236d82cb&label=Join%20Community&logo=discord&logoColor=%23FFFFFF&style=flat-square" alt="Join discord"/>
 </a>
 </p>
