@@ -1,4 +1,4 @@
-[<p align="center">
+<p align="center">
   <a href="https://github.com/Stone6142/gamedrive" title="Game Drive">
   </a>
 </p>
@@ -60,4 +60,4 @@
 </p>
 
 <p align="center">Made with Js, HTML, CSS, & ❤️</p>
-]
+
