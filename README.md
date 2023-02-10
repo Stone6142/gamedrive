@@ -13,7 +13,7 @@
 <img src="https://img.shields.io/github/forks/Stone6142/gamedrive?label=Forks&logo=Github&style=flat-square" alt="<repo-title> Forks"/>
 </a>
 <a href="https://github.com/Stone6142/gamedrive/stargazers" title="Stars">
-<img src="https://img.shields.io/github/stars/Stone6142/gamedrive?label=Stars&logo=Github&color=yellow&style=flat-square" alt="Game Drive Stars"/>
+<img src="https://img.shields.io/github/stars/Stone6142/gamedrive?label=Stars&logo=Github&color=e3b341&style=flat-square" alt="Game Drive Stars"/>
 </a>
 <a href="https://github.com/Stone6142/gamedrive/issues" title="Issues">
 <img src="https://img.shields.io/github/issues/Stone6142/gamedrive?label=Issues&logo=Github&style=flat-square" alt="<repo-title> Issues"/>
