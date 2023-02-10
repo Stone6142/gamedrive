@@ -43,8 +43,8 @@
 </style>
 <!--begining of crappy/jank code-->
   <div class="img">
-    <a href="../" id="lad" target="_blank">
-  <img id="myImage" src="adtest.png"></img>
+    <a href="https://brookings.instructure.com/courses/7038" id="lad" target="_blank">
+  <img id="myImage" src="1.png"></img>
     </a>
   </div>
 
@@ -291,6 +291,12 @@ close_btn.addEventListener('click', () => {
 </script>
 <script>
   window.addEventListener("load", adf, false);
+	function ade() {
+    document.getElementById('myImage').src='1.png'
+    document.getElementById('lad').href = "https://brookings.instructure.com/courses/7038"
+    setTimeout(adf, 20000)
+    
+  };
   function adf() {
     document.getElementById('myImage').src='dourschoolwork.png'
     document.getElementById('lad').href = "https://brookings.instructure.com/"
@@ -300,7 +306,7 @@ close_btn.addEventListener('click', () => {
   function adg(){
     document.getElementById('myImage').src='adtest.png'
     document.getElementById('lad').href = "../price/"
-    setTimeout(adf, 10000)
+    setTimeout(ade, 10000)
   };
 </script>
 <script src="https://kit.fontawesome.com/5df9058d00.js" crossorigin="anonymous"></script>
