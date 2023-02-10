@@ -13,7 +13,7 @@
 <img src="https://img.shields.io/github/forks/Stone6142/gamedrive?label=Forks&logo=Github&style=flat-square" alt="<repo-title> Forks"/>
 </a>
 <a href="https://github.com/Stone6142/gamedrive/stargazers" title="Stars">
-<img src="https://img.shields.io/github/stars/Stone6142/gamedrive?label=Stars&logo=Github&style=flat-square" alt="Game Drive Stars"/>
+<img src="https://img.shields.io/github/stars/Stone6142/gamedrive?label=Stars&logo=Github&color=yellow&style=flat-square" alt="Game Drive Stars"/>
 </a>
 <a href="https://github.com/Stone6142/gamedrive/issues" title="Issues">
 <img src="https://img.shields.io/github/issues/Stone6142/gamedrive?label=Issues&logo=Github&style=flat-square" alt="<repo-title> Issues"/>
@@ -23,10 +23,11 @@
 </a>
 <a href="https://github.com/Stone6142/gamedrive" title="Repo Size">
 <img src="https://img.shields.io/github/repo-size/Stone6142/gamedrive?label=Repo%20Size&logo=Github&style=flat-square" alt="Game Drive Repo Size"/>
-</a>
+<!--</a>
 <a target="_blank" href="FIX" target="_blank" title="Join Community">
 <img src="https://img.shields.io/discord/737854816402800690?color=%236d82cb&label=Join%20Community&logo=discord&logoColor=%23FFFFFF&style=flat-square" alt="Join discord"/>
 </a>
+-->
 </p>
 <!-- <p align="center"><img src="./assets/images/main.gif" alt="<repo-title>"/></p> -->
 
