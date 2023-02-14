@@ -9,7 +9,6 @@
 <!--<a href="https://github.com/Stone6142/gamedrive/blob/master/LICENSE" title="License">
 <img src="https://img.shields.io/github/license/Stone6142/gamedrive?label=License&logo=Github&style=flat-square" alt="Game Drive License"/>
 </a>-->
-<img src="https://img.shields.io/github/commits-since/stone6142/gamedrive?label=Forks&logo=Github&style=flat-square/ccac894"/>
 <a href="https://github.com/Stone6142/gamedrive/fork" title="Forks">
 <img src="https://img.shields.io/github/forks/Stone6142/gamedrive?label=Forks&logo=Github&style=flat-square" alt="Game Drive Forks"/>
 </a>
