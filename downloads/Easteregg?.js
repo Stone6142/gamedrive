@@ -38,9 +38,9 @@ document.addEventListener('keydown', function(e) {
 });
 
 function activateCheats() {
-  document.body.style.backgroundImage = "url('images/cheatBackground.png')";
+  document.body.style.backgroundImage = "url('yes.gif')";
 
-  var audio = new Audio('audio/pling.mp3');
+  var audio = new Audio('Recording (9).m4a');
   audio.play();
 
   alert("cheats activated");
