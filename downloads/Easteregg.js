@@ -43,5 +43,5 @@ function activateCheats() {
   var audio = new Audio('Recording (9).m4a');
   audio.play();
 
-  alert("cheats activated");
+  alert("Easter Egg Activated");
 }
