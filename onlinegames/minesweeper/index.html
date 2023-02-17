@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="public/css/main.css">
+</head>
+
+<body>
+    <header class="site-header" role="banner">
+        <div class="wrap">
+            <h1>minesweeper</h1>
+            <div class="legend">
+                <p><strong>flag:</strong> <code><span class="key">alt</span>+<span class="click">click</span></code></p>
+            </div>
+        </div>
+    </header>
+    <main class="site-main" role="main">
+        <div class="wrap">
+            <div id="board">
+                <div class="top">
+                    <div id="scoreboard">
+                        <div id="minecounter" class="counter"></div>
+                        <div>
+                            <div class="select-wrap">
+                                <select name="level" id="level">
+                                    <option value="beginner">Beginner</option>
+                                    <option value="intermediate">Intermediate</option>
+                                    <option value="expert" selected>Expert</option>
+                                </select>
+                            </div>
+                            <button class="reset">🙂</button>
+                        </div>
+                        <div id="timer" class="counter"></div>
+                    </div>
+                    <div id="grid"></div>
+                </div>
+                <div class="bottom"></div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="public/js/mines.js"></script>
+</body>
+
+</html>

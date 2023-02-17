@@ -1,0 +1,20 @@
+{
+  "name": "js-minesweeper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch public/scss -o public/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmchuynh/JS-Minesweeper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmchuynh/JS-Minesweeper/issues"
+  },
+  "homepage": "https://github.com/tmchuynh/JS-Minesweeper#readme"
+}

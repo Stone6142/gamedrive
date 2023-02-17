@@ -1,0 +1,378 @@
+// Variables
+
+// Colors
+$colors: (
+  white: #fff,
+  gray-light: #efefef,
+  gray-mid: #e3e3e3,
+  gray: #d1d1d1,
+  gray-dark: #808080,
+  black: #333,
+  red: #ec433c,
+  maroon: #a6070f,
+  purple: #a42887,
+  yellow: #d7af42,
+  yellow-light: #fef178,
+  blue: #2a48ec,
+  blue-dark: #233db7,
+  green: #2bb13d,
+  turquoise: #28907d
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+//base styles
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  color: color(black);
+  padding: 20px 20px 100px;
+  background-color: color(gray-light);
+  font-family: 'Space Mono', monospace;
+}
+
+h1 {
+  margin: 0 0 32px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.25em;
+}
+
+a {
+	color: inherit;
+}
+
+img {
+  height: auto;
+	max-width: 100%;
+}
+
+.wrap {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+$cellSize: 24px;
+
+.legend {
+  font-size: 1.25rem;
+  margin: 0 auto 32px;
+  p {
+    margin: 0 0 6px;
+  }
+  code {
+    background: color(gray-mid);
+    .key {
+      color: color(red);
+    }
+    .click {
+      color: color(blue);
+    }
+  }
+}
+
+.top {
+  border: 6px solid color(gray-mid);
+  background-color: color(gray-mid);
+}
+
+#scoreboard {
+  display: flex;
+  padding-bottom: 12px;
+  justify-content: space-between;
+
+  .select-wrap {
+    font-weight: 700;
+    vertical-align: top;
+    display: inline-block;
+    select {
+      margin: 0;
+      height: 36px;
+      border-radius: 0;
+      border-width: 3px;
+      border-style: solid;
+      background-color: color(gray);
+      border-color: lighten(color(gray), 20%) darken(color(gray), 20%) darken(color(gray), 20%) lighten(color(gray), 20%);
+      &:hover,
+      &:focus {
+        background-color: lighten(color(gray), 10%);
+      }
+    }
+  }
+
+  .reset {
+    padding: 0 4px;
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: 700;
+    line-height: 30px;
+    border-width: 3px;
+    border-style: solid;
+    background-color: color(gray);
+    border-color: lighten(color(gray), 20%) darken(color(gray), 20%) darken(color(gray), 20%) lighten(color(gray), 20%);
+    &:hover,
+    &:focus {
+      outline: none;
+      background-color: lighten(color(gray), 10%);
+    }
+  }
+  .counter {
+    padding: 0 4px;
+    color: color(red);
+    border: 3px inset;
+    line-height: 30px;
+    letter-spacing: .08em;
+    display: inline-block;
+    background: color(black);
+    text-shadow: 0 0 2px rgba(color(red),1);
+    &:first-of-type {
+      margin-right: 20px;
+    }
+    &:last-of-type {
+      margin-left: 20px;
+    }
+  }
+}
+
+#grid {
+  margin: 0 auto;
+  position: relative;
+  display: inline-block;
+
+  ::selection {
+    background-color: transparent;
+  }
+
+  // Disabled when you win or lose
+  &.disabled {
+    .cell {
+      pointer-events: none;
+    }
+
+    .status-indicator {
+      top: 50%;
+      left: 50%;
+      z-index: 11;
+      width: 8vw;
+      height: 8vw;
+      font-size: 4vw;
+      cursor: pointer;
+      line-height: 8vw;
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: auto;
+      background-color: color(gray);
+      transform: translate(-50%, -50%);
+      border: 1px solid rgba(color(black),.25);
+      &::after {
+        content: '';
+      }
+    }
+    &.win .status-indicator::after {
+      content: '😎';
+    }
+    &.lose .status-indicator::after {
+      content: '☹️';
+    }
+  }
+
+  .row {
+    display: flex;
+  }
+  .cell {
+    cursor: pointer;
+    width: $cellSize;
+    height: $cellSize;
+    position: relative;
+    background-color: color(gray);
+    border-width: 3px;
+    border-style: solid;
+    border-color: lighten(color(gray), 20%) darken(color(gray), 20%) darken(color(gray), 20%) lighten(color(gray), 20%);
+
+    i {
+      left: 0;
+      bottom: 0;
+      margin: 0;
+      width: 100%;
+      font-size: 14px;
+      font-weight: 700;
+      font-style: normal;
+      position: absolute;
+      line-height: $cellSize;
+    }
+
+    // Veil
+    &::before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      content: '';
+      // opacity: .85;
+      position: absolute;
+      background-color: color(gray);
+    }
+    &::after {
+      top: 50%;
+      left: 50%;
+      content: '';
+      position: absolute;
+      transform: translate(-50%, -50%);
+    }
+
+    &:hover {
+      &::before {
+        background-color: lighten(color(gray),10%);
+      }
+    }
+
+    &.revealed {
+      border: 1px solid darken(color(gray),10%);
+      &::before {
+        display: none;
+      }
+      .flag {
+        display: none;
+      }
+    }
+
+    // Flags
+    .flag {
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      width: 10px;
+      height: 4px;
+      position: absolute;
+      border-style: solid;
+      border-width: 4px 0 4px 10px;
+      transform: translate(-50%, -50%);
+      border-color: transparent transparent transparent color(red);
+    }
+    // Maybe
+    &.maybe {
+      .flag {
+        border-color: transparent transparent transparent color(yellow);
+      }
+    }
+
+    // Mines
+    &.mine {
+      background-color: color(red);
+      &::after {
+        border-radius: 50%;
+        width: $cellSize / 2;
+        height: $cellSize / 2;
+        background-color: color(black);
+      }
+    }
+
+    // Incorrect
+    &.incorrect {
+      .flag {
+        &::before,
+        &::after {
+          top: 50%;
+          z-index: 1;
+          left: -13px;
+          height: 2px;
+          width: 16px;
+          content: '';
+          position: absolute;
+          background-color: black;
+        }
+        &::before {
+          transform: rotate(-45deg);
+        }
+        &::after {
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    // On mousedown
+    &.mousedown {
+      border: none;
+    }
+  }
+}
+
+// High Score Board
+#leaderboard {
+  margin-top: 20px;
+  text-align: center;
+
+  h4 {
+    margin: 0 0 10px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 10px;
+    display: inline-block;
+    background-color: rgba(color(gray),.5);
+    li {
+      padding: 2px;
+      list-style: none;
+      span {
+        font-weight: 900;
+        text-transform: capitalize;
+      }
+
+      &.highlight {
+        background-color: color(yellow-light);
+      }
+    }
+  }
+
+  button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    appearance: none;
+    background: none;
+    text-decoration: underline;
+  }
+}
+
+// Set Count Color Styles
+@each $color, $value in $colors {
+  .cell.#{$color} {
+    color: $value;
+  }
+}
+
+// Dev Box
+#devbox {
+  top: 10px;
+  right: 10px;
+  position: fixed;
+  text-align: left;
+  max-width: 300px;
+  color: color(white);
+  background-color: color(black);
+  p {
+    margin: 0;
+    font-size: 12px;
+    padding: 10px 20px;
+    + p {
+      padding-top: 5px;
+    }
+  }
+}
