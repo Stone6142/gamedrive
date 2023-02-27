@@ -8,23 +8,23 @@ function validate() {
   var password = btoa(password1);
   if (username == "U2t5bGVy" && password == "MTgzNjA=") {
     alert("Login successfully");
-    window.location(atob("Li9sb2dpbnMxL21lNzVmMWY0OWMtMDIxMS00MzM3LWEzNjQtYjc2MDJlYzM4ZWEzLw==")); // Redirecting to other page.
+    window.location = "../logins1/me75f1f49c-0211-4337-a364-b7602ec38ea3/"; // Redirecting to other page.
     return false;
-  } else if (username == "Q29yYnlu" && password == "MjUzNQ==") {
+  } else if (username == "Corbyn" && password == "2535") {
     alert("Login successfully");
-    window.location(atob("Li4vbG9naW5zMS9jcDA4ZDg0MjBmLTBlYjUtNGNhZi1iODQxLWNlM2I1ZmU2OGNlNA==")); // Redirecting to other page.
+    window.location = "../logins1/cp08d8420f-0eb5-4caf-b841-ce3b5fe68ce4"; // Redirecting to other page.
     return false;
-  } else if (username == "Q2FsZQ==" && password == "MjUwOA==") {
+  } else if (username == "Cale" && password == "2508") {
     alert("Login successfully");
-    window.location(atob("Li4vbG9naW5zMS9jajhlODQwNjFiLTgzZDUtNGMzMy1hNDk5LWMyMTE4ZjIyNjg2Yw==")); // Redirecting to other page.
+    window.location = "../logins1/cj8e84061b-83d5-4c33-a499-c2118f22686c"; // Redirecting to other page.
     return false;
-  } else if (username == "YnA=" && password == "cG9vcGVhdGVyMzMx") {
+  } else if (username == "bp" && password == "poopeater331") {
     alert("Login successfully");
-    window.location(atob("Li4vbG9naW5zMS9icDhlODQwNjFiLTgzZDUtNGMzMy1hNDk5LWMyMTE4ZjIyNjg2Yw==")); // Redirecting to other page.
+    window.location = "../logins1/bp8e84061b-83d5-4c33-a499-c2118f22686c"; // Redirecting to other page.
     return false;
-  } else if (username == "YWo=" && password == "U2Q0LmxpZmU=") {
+  } else if (username == "aj" && password == "Sd4.life") {
     alert("Login successfully");
-    window.location(atob("Li4vbG9naW5zMS9hamMzNjdkMGM4LWZiNGQtNGM5Mi1hYTA4LTkzZTNlZTEwODdkMjE=")); // Redirecting to other page.
+    window.location = "../logins1/ajc367d0c8-fb4d-4c92-aa08-93e3ee1087d21"; // Redirecting to other page.
     return false;
   }
   else {
