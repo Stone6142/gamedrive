@@ -6,7 +6,7 @@ function validate() {
   var password1 = document.getElementById("password").value;
   var username = btoa(username1);
   var password = btoa(password1);
-  if (username == "Skyler" && password == ``) {
+  if (username == "U2t5bGVy" && password == "MTgzNjA=") {
     alert("Login successfully");
     window.location = "../logins1/me75f1f49c-0211-4337-a364-b7602ec38ea3/"; // Redirecting to other page.
     return false;
