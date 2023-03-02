@@ -4,7 +4,7 @@
  * and for refreshing/setting up a new game).
  *
  * @author Stone6142
- *	
+  *	
  * @param {String} gameId ID of the word search game div (where the actual grid of letters goes)
  * @param {String} listId ID of the div where the list of words to find goes
  * @param {String} solveId ID for button to solve the puzzle
