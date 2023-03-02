@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+	<head>	
+		<meta charset="utf-8">
+		<title>Game Drive Word Search Game!</title>
+		<link rel="stylesheet" href="../sidebar.css">
+	</head>
+	<link rel="icon" type="image/png" sizes="256x256" href="../../img/logo2.png">
+	<div class="main">
+	<body>
+		<h1>Game Drive Word Search Game!</h1>
+		<h2 id = "instructions"></h2>
+		<h3 id = "themeIntro">The theme is: <span id = "wordTheme"></span></h3>
+		
+		<button id = "newGameButton" type = "button">New Game</button>
+		<div id = "wordboard"></div>
+		<div id = "wordlist"></div>
+		<button id = "solveButton" type = "button">Release the sacred answers!</button>
+
+		<link rel = "stylesheet" type="text/css" href = "css/wordsearch.css">
+
+		<script src = https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js></script>
+
+		<script src = "js/wordpaths.js"></script>
+		<script src = "js/wordsearchcontroller.js"></script>
+		<script src = "js/wordsearchlogic.js"></script>
+		<script src = "js/wordsearchview.js"></script>
+
+		<script>	
+			$(document).ready( function() {
+				new WordSearchController("#wordboard", "#wordlist", "#solveButton", "#newGameButton", "#instructions", 
+					"#wordTheme");
+			})
+		</script>
+	</body>
+	</div>
+	<div class=foo><a href="../../extra/release/">3.5v </a></div>
+	<div class="sidenav">
+		<a href="../../">Dashboard</a>
+		<a href="../../broken/"><strong>Broken</strong></a>
+		<a href="../../downloads/">Downloads</a>
+		<a href="../../tools/">Tools</a>
+		<a href="https://docs.google.com/document/d/1uBznNAbuVtK9Wl2lWTup7WhFuLdnNVY7EapjC0f6CFU/edit?usp=sharing">Info</a>
+		<a href="../../chat">Chat</a>
+		<a href="../../extra/challenges">Extra Crap</a>
+</div>
+</html>
