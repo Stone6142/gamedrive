@@ -52,8 +52,7 @@ function WordSearchController(gameId, listId, solveId, newGameId, instructionsId
 			["Ragdoll", "Singapura", "Snowshoe", "Turkish Van"],
 			["Maine Coon", "Devon Rex", "Charteux", "Scottish Fold"],
 			["Himalayan", "Ragamuffin", "Bombay", "Siberian"],
-			["Egyptian Mau", "Norwegian Forest Cat", "Abyssinian", "York Chocolate"]],
-		"Animals": [["Dog", "Cat", "Fish", "Sphynx"],
+			["Egyptian Mau", "Norwegian Forest Cat", "Abyssinian", "York Chocolate"]]
 
 	};
 
