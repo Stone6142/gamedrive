@@ -54,7 +54,7 @@ function WordSearchController(gameId, listId, solveId, newGameId, instructionsId
 			["Himalayan", "Ragamuffin", "Bombay", "Siberian"],
 			["Egyptian Mau", "Norwegian Forest Cat", "Abyssinian", "York Chocolate"]],
 		"Dog Breeds": [["Affenpinscher", "Pit Bull", "Corkie", "Dachshund"],
-			["Eskimo Dog", "Alaskan Husky", "Boxer", "Great Dane"],
+			["Eskimo Dog", "Saint Bernard", "Boxer", "Great Dane"],
 			["Golden Retriever", "Bloodhound", "Husky", "Aidi"],
 			["Huskydoodle", "Mastiff", "Bulldog", "Rottweiler"],
 			["Pointer", "Pug", "Shiba Inu", "German Shepherd"]]
