@@ -1,0 +1,770 @@
+<!--begining of crappy/jank code-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    .button {
+      border: none;
+      color: white;
+      padding: 12px 50px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 22px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      width: 310px;
+      border-radius: 15px;
+    }
+
+    .button1 {
+      background-color: #434750;
+      color: #999;
+      border: 2px solid #434750;
+    }
+
+    .button1:hover {
+      background-color: #434750;
+      color: #33a3ee;
+    }
+  </style>
+  <link rel="stylesheet" href="sidebar.css">
+  <title>Game Drive Blooket Hacks</title>
+  <link rel="icon" type="image/png" sizes="256x256" href="../img/logo2.png">
+	<div class="social-panel-container">
+  <div class="social-panel">
+    <p>Created with <i class="fa fa-heart"></i>, by
+      <a target="_blank" href="../">Skyler</a></p>
+    <button class="close-btn"><i class="fas fa-times"></i></button>
+    <h4>Get in touch on</h4>
+    <ul>
+      <li>
+	<a href="https://patreon.com/Stone6142" target="_blank">
+          <i class="fab fa-patreon"></i>
+        
+        </a>
+      </li>
+      <li>
+        <a href="mailto:sb4549@k12.sd.us" target="_blank">
+          <i class="fab fa-google"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.amazon.com/hz/wishlist/ls/14J9ATLFVRQAF?ref_=wl_share" target="_blank">
+          <i class="fab fa-amazon"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.discordapp.com/users/658366195866796064" target="_blank">
+          <i class="fab fa-discord"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<button class="floating-btn">
+    Get in Touch
+  </button>
+  <div class="main">
+	<div style="border:1px solid black;height:1px;width:1px;overflow-y:hidden;overflow-x:scroll;">
+	<textarea id="goldesp1"> (async () => {
+    let n = document.createElement('iframe');
+    document.body.append(n);
+    window.alert = n.contentWindow.alert.bind(window);
+    window.prompt = n.contentWindow.prompt.bind(window);
+    window.confirm = n.contentWindow.confirm.bind(window);
+    n.remove();
+            if (window.location.pathname != '/play/gold') {
+                alert('You must be in a gold quest game!');
+            } else {
+                alert('Chest ESP enabled');
+
+                interval = setInterval(() => {
+                    if (window.location.pathname != '/play/gold') return clearInterval(interval);
+
+                    data = Object.values(document.querySelector('#app > div > div'))[1].children[1]._owner.stateNode.state;
+
+                    if (data?.stage == 'prize') {
+                        boxes = data.choices;
+                        choiceDiv = document.querySelector("div[class*='arts__regularBody']")?.children[1];
+                        if (!choiceDiv) return clearInterval(interval)
+                        if (!document.querySelector("p[class*='chest-esp']")) boxes.forEach((box, i) => {
+                            textElement = document.createElement('p');
+                            textElement.className = "chest-esp";
+                            textElement.innerText = box.text;
+                            textElement.style = `text-align: center;
+                                font-size: 30px;
+                                color: white;
+                                font-family:Titan One;
+                                sans-serif;
+                                -webkit-user-select:none;
+                                -moz-user-select:none;
+                                -ms-user-select:none;
+                                user-select:none;
+                                border-color: black;
+                                margin-top: 200px;`
+                            try { choiceDiv.children[i].appendChild(textElement); } catch (e) {
+                                if (confirm('An error occured, would you like to report this in the support discord server?')) {
+                                    window.open('https://glizzers.xyz/discord');
+                                };
+                            };
+                        });
+
+                        else boxes.forEach((box, i) => {
+                            if (choiceDiv.children.length == 3 && choiceDiv.children[i].children[1].innerText != box.text) choiceDiv.children[i].children[1].innerText = box.text;
+                        });
+                    };
+
+                    if (window.location.pathname != '/play/gold') clearInterval(interval)
+
+                }, 0);
+            };
+})();
+
+
+function footer() {
+    let element = document.createElement('div');
+
+    element.style = `font-family: "Nunito", sans-serif; font-size: 14px; height: 65px; width: 175px; border: 4px solid rgb(15, 15, 15); background: rgb(240, 240, 240); position: absolute; top: 20x; left: 20px; border-radius: 10px; color: rgb(0, 0, 0); text-align: center;`;
+    element.innerHTML = `<p>Made by Stone6142</p>`;
+    document.body.appendChild(element);
+
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    element.onmousedown = ((e = window.event) => {
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = (() => {
+            document.onmouseup = null;
+            document.onmousemove = null;
+        });
+        document.onmousemove = ((e) => {
+            e = e || window.event;
+            e.preventDefault();
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            let top = (element.offsetTop - pos2) > 0 ? (element.offsetTop - pos2) : 0;
+            let left = (element.offsetLeft - pos1) > 0 ? (element.offsetLeft - pos1) : 0;
+            element.style.top = top + "px";
+            element.style.left = left + "px";
+        });
+    });
+};
+
+footer();
+</textarea>
+<textarea id="goldsetplayer1">
+(() => {
+    let n = document.createElement('iframe');
+    document.body.append(n);
+    window.alert = n.contentWindow.alert.bind(window);
+    window.prompt = n.contentWindow.prompt.bind(window);
+    window.confirm = n.contentWindow.confirm.bind(window);
+    n.remove();
+
+    function reactHandler() {
+        return Object.values(document.querySelector('#app > div > div'))[1].children[1]._owner;
+    };
+
+    if (window.location.pathname != '/play/gold') {
+        alert('You must be in a gold quest game!');
+    } else {
+        let e = reactHandler(),
+            player = prompt("Player name to set gold"),
+            amount = Number(parseFloat(prompt("Amount to set gold to")));
+        e.memoizedProps.firebase.setVal({
+            id: e.memoizedProps.client.hostId,
+            path: "c/" + e.memoizedProps.client.name,
+            val: {
+                b: e.memoizedProps.client.blook,
+                g: e.stateNode.state.gold,
+                tat: player + ":swap:" + amount
+            }
+        })
+        alert('Set gold for player:' + player + ' to ' + amount);
+    };
+})();
+
+function footer() {
+    let element = document.createElement('div');
+
+    element.style = `font-family: "Nunito", sans-serif; font-size: 14px; height: 65px; width: 175px; border: 4px solid rgb(15, 15, 15); background: rgb(240, 240, 240); position: absolute; top: 20x; left: 20px; border-radius: 10px; color: rgb(0, 0, 0); text-align: center;`;
+    element.innerHTML = `<p>Made by Stone6142</p>`;
+    document.body.appendChild(element);
+    
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    element.onmousedown = ((e = window.event) => {
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = (() => {
+            document.onmouseup = null;
+            document.onmousemove = null;
+        });
+        document.onmousemove = ((e) => {
+            e = e || window.event;
+            e.preventDefault();
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            let top = (element.offsetTop - pos2) > 0 ? (element.offsetTop - pos2) : 0;
+            let left = (element.offsetLeft - pos1) > 0 ? (element.offsetLeft - pos1) : 0;
+            element.style.top = top + "px";
+            element.style.left = left + "px";
+        });
+    });
+};
+
+footer();
+</textarea>
+<textarea id="fishlure1">
+(async () => {
+    let n = document.createElement('iframe');
+    document.body.append(n);
+    window.alert = n.contentWindow.alert.bind(window);
+    window.prompt = n.contentWindow.prompt.bind(window);
+    window.confirm = n.contentWindow.confirm.bind(window);
+    n.remove();
+            function reactHandler() {
+                return Object.values(document.querySelector('#app > div > div'))[1].children[1]._owner;
+            };
+        
+            if (window.location.pathname != '/play/fishing') {
+                alert('You must be in a fishing frenzy game!');
+            } else {
+                let lure = Number(parseFloat(prompt('What do you want to set your lure to? (1 - 5)'))) - 1;
+                reactHandler().stateNode.setState({ lure: lure < 0 ? 0 : lure > 4 ? 4 : lure });
+        
+                alert('Lure set!');
+            };
+})();
+
+
+function footer() {
+    let element = document.createElement('div');
+
+    element.style = `font-family: "Nunito", sans-serif; font-size: 14px; height: 65px; width: 175px; border: 4px solid rgb(15, 15, 15); background: rgb(240, 240, 240); position: absolute; top: 20x; left: 20px; border-radius: 10px; color: rgb(0, 0, 0); text-align: center;`;
+    element.innerHTML = `<p>Made by Stone6142</p>`;
+    document.body.appendChild(element);
+    
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    element.onmousedown = ((e = window.event) => {
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = (() => {
+            document.onmouseup = null;
+            document.onmousemove = null;
+        });
+        document.onmousemove = ((e) => {
+            e = e || window.event;
+            e.preventDefault();
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            let top = (element.offsetTop - pos2) > 0 ? (element.offsetTop - pos2) : 0;
+            let left = (element.offsetLeft - pos1) > 0 ? (element.offsetLeft - pos1) : 0;
+            element.style.top = top + "px";
+            element.style.left = left + "px";
+        });
+    });
+};
+
+footer();
+</textarea>
+<textarea id="">
+</textarea>
+<textarea id="fishweight">
+(async () => {
+    let n = document.createElement('iframe');
+    document.body.append(n);
+    window.alert = n.contentWindow.alert.bind(window);
+    window.prompt = n.contentWindow.prompt.bind(window);
+    window.confirm = n.contentWindow.confirm.bind(window);
+    n.remove();
+            function reactHandler() {
+                return Object.values(document.querySelector('#app > div > div'))[1].children[1]._owner;
+            };
+        
+            if (window.location.pathname != '/play/fishing') {
+                alert('You must be in a fishing frenzy game!');
+            } else {
+                let weight = Number(parseFloat(prompt('How much weight do you want?')));
+                reactHandler().stateNode.setState({ weight2: weight, weight });
+        
+                alert('Weight set!');
+            };
+})();
+
+
+function footer() {
+    let element = document.createElement('div');
+
+    element.style = `font-family: "Nunito", sans-serif; font-size: 14px; height: 65px; width: 175px; border: 4px solid rgb(15, 15, 15); background: rgb(240, 240, 240); position: absolute; top: 20x; left: 20px; border-radius: 10px; color: rgb(0, 0, 0); text-align: center;`;
+    element.innerHTML = `<p>Made by Stone6142</p>`;
+    document.body.appendChild(element);
+    
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    element.onmousedown = ((e = window.event) => {
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = (() => {
+            document.onmouseup = null;
+            document.onmousemove = null;
+        });
+        document.onmousemove = ((e) => {
+            e = e || window.event;
+            e.preventDefault();
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            let top = (element.offsetTop - pos2) > 0 ? (element.offsetTop - pos2) : 0;
+            let left = (element.offsetLeft - pos1) > 0 ? (element.offsetLeft - pos1) : 0;
+            element.style.top = top + "px";
+            element.style.left = left + "px";
+        });
+    });
+};
+
+footer();
+</textarea>
+<textarea id="cafeinifood">
+(async () => {
+    let n = document.createElement('iframe');
+    document.body.append(n);
+    window.alert = n.contentWindow.alert.bind(window);
+    window.prompt = n.contentWindow.prompt.bind(window);
+    window.confirm = n.contentWindow.confirm.bind(window);
+    n.remove();
+            function reactHandler() {
+                return Object.values(document.querySelector('#app > div > div'))[1].children[1]._owner;
+            };
+
+            if (document.location.pathname != "/cafe") {
+                alert("You must be in a cafe game!");
+            } else {
+                reactHandler().stateNode.state.foods.forEach(e => e.stock = 99999);
+                reactHandler().stateNode.forceUpdate();
+
+                alert('Added infinite food level!');
+            }
+})();
+
+
+function footer() {
+    let element = document.createElement('div');
+
+    element.style = `font-family: "Nunito", sans-serif; font-size: 14px; height: 65px; width: 175px; border: 4px solid rgb(15, 15, 15); background: rgb(240, 240, 240); position: absolute; top: 20x; left: 20px; border-radius: 10px; color: rgb(0, 0, 0); text-align: center;`;
+    element.innerHTML = `<p>Made by Stone6142</p>`;
+    document.body.appendChild(element);
+
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    element.onmousedown = ((e = window.event) => {
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = (() => {
+            document.onmouseup = null;
+            document.onmousemove = null;
+        });
+        document.onmousemove = ((e) => {
+            e = e || window.event;
+            e.preventDefault();
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            let top = (element.offsetTop - pos2) > 0 ? (element.offsetTop - pos2) : 0;
+            let left = (element.offsetLeft - pos1) > 0 ? (element.offsetLeft - pos1) : 0;
+            element.style.top = top + "px";
+            element.style.left = left + "px";
+        });
+    });
+};
+
+footer();
+</textarea>
+<textarea id="cafescash">
+(async () => {
+    let n = document.createElement('iframe');
+    document.body.append(n);
+    window.alert = n.contentWindow.alert.bind(window);
+    window.prompt = n.contentWindow.prompt.bind(window);
+    window.confirm = n.contentWindow.confirm.bind(window);
+    n.remove();
+            function reactHandler() {
+                return Object.values(document.querySelector('#app > div > div'))[1].children[1]._owner;
+            };
+
+            if (document.location.pathname != "/cafe") {
+                alert("You must be in a cafe game!");
+            } else {
+                reactHandler().stateNode.setState({ cafeCash: Number(parseFloat(prompt('How much cash would you like?'))) });
+
+
+                alert('Added cash!');
+            };
+})();
+
+
+function footer() {
+    let element = document.createElement('div');
+
+    element.style = `font-family: "Nunito", sans-serif; font-size: 14px; height: 65px; width: 175px; border: 4px solid rgb(15, 15, 15); background: rgb(240, 240, 240); position: absolute; top: 20x; left: 20px; border-radius: 10px; color: rgb(0, 0, 0); text-align: center;`;
+    element.innerHTML = `<p>Made by Stone6142</p>`;
+    document.body.appendChild(element);
+
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    element.onmousedown = ((e = window.event) => {
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = (() => {
+            document.onmouseup = null;
+            document.onmousemove = null;
+        });
+        document.onmousemove = ((e) => {
+            e = e || window.event;
+            e.preventDefault();
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            let top = (element.offsetTop - pos2) > 0 ? (element.offsetTop - pos2) : 0;
+            let left = (element.offsetLeft - pos1) > 0 ? (element.offsetLeft - pos1) : 0;
+            element.style.top = top + "px";
+            element.style.left = left + "px";
+        });
+    });
+};
+
+footer();
+</textarea>
+<textarea id="cryptosmoney">
+(async () => {
+    let n = document.createElement('iframe');
+    document.body.append(n);
+    window.alert = n.contentWindow.alert.bind(window);
+    window.prompt = n.contentWindow.prompt.bind(window);
+    window.confirm = n.contentWindow.confirm.bind(window);
+    n.remove();
+            function reactHandler() {
+                return Object.values(document.querySelector('#app > div > div'))[1].children[1]._owner;
+            };
+        
+            if (window.location.pathname != '/play/hack') {
+                alert('You must be in a crypto hack game mode to use this hack!');
+            } else {
+                let amount = Number(parseFloat(prompt('How much crypto do you want?')));
+                reactHandler().stateNode.setState({ crypto2: amount, crypto: amount });
+        
+                alert('Crypto added!');
+            };
+})();
+
+
+function footer() {
+    let element = document.createElement('div');
+
+    element.style = `font-family: "Nunito", sans-serif; font-size: 14px; height: 65px; width: 175px; border: 4px solid rgb(15, 15, 15); background: rgb(240, 240, 240); position: absolute; top: 20x; left: 20px; border-radius: 10px; color: rgb(0, 0, 0); text-align: center;`;
+    element.innerHTML = `<p>Made by Stone6142</p>`;
+    document.body.appendChild(element);
+    
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    element.onmousedown = ((e = window.event) => {
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = (() => {
+            document.onmouseup = null;
+            document.onmousemove = null;
+        });
+        document.onmousemove = ((e) => {
+            e = e || window.event;
+            e.preventDefault();
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            let top = (element.offsetTop - pos2) > 0 ? (element.offsetTop - pos2) : 0;
+            let left = (element.offsetLeft - pos1) > 0 ? (element.offsetLeft - pos1) : 0;
+            element.style.top = top + "px";
+            element.style.left = left + "px";
+        });
+    });
+};
+
+footer();
+</textarea>
+<textarea id="deceptive-dinos">
+(async () => {
+    let n = document.createElement('iframe');
+    document.body.append(n);
+    window.alert = n.contentWindow.alert.bind(window);
+    window.prompt = n.contentWindow.prompt.bind(window);
+    window.confirm = n.contentWindow.confirm.bind(window);
+    n.remove();
+                function reactHandler() {
+                    return Object.values(document.querySelector('#app > div > div'))[1].children[1]._owner;
+                };
+
+                let fossils = Number(parseFloat(prompt('How many fossils do you want?')));
+                reactHandler().stateNode.setState({ fossils: fossils });
+
+                alert('Fossils added!');
+            } catch (e) {
+                if (confirm('Game error occured please report to discord server as soon as possible')) {
+                    window.open('https://discord.gg/Nj9Zs5VtFp');
+                };
+            };
+})();
+
+
+function footer() {
+    let element = document.createElement('div');
+
+    element.style = `font-family: "Nunito", sans-serif; font-size: 14px; height: 65px; width: 175px; border: 4px solid rgb(15, 15, 15); background: rgb(240, 240, 240); position: absolute; top: 20x; left: 20px; border-radius: 10px; color: rgb(0, 0, 0); text-align: center;`;
+    element.innerHTML = `<p>Made by Stone6142</p>`;
+    document.body.appendChild(element);
+
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    element.onmousedown = ((e = window.event) => {
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = (() => {
+            document.onmouseup = null;
+            document.onmousemove = null;
+        });
+        document.onmousemove = ((e) => {
+            e = e || window.event;
+            e.preventDefault();
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            let top = (element.offsetTop - pos2) > 0 ? (element.offsetTop - pos2) : 0;
+            let left = (element.offsetLeft - pos1) > 0 ? (element.offsetLeft - pos1) : 0;
+            element.style.top = top + "px";
+            element.style.left = left + "px";
+        });
+    });
+};
+
+footer();
+</textarea>
+<textarea id="rushsdef">
+(async () => {
+    let n = document.createElement('iframe');
+    document.body.append(n);
+    window.alert = n.contentWindow.alert.bind(window);
+    window.prompt = n.contentWindow.prompt.bind(window);
+    window.confirm = n.contentWindow.confirm.bind(window);
+    n.remove();
+            function reactHandler() {
+                return Object.values(document.querySelector('#app > div > div'))[1].children[1]._owner;
+            };
+
+            if (window.location.pathname != '/play/rush') {
+                alert('You must be in a blook rush game mode to use this hack!');
+            } else {
+                let e = reactHandler();
+                e.stateNode.props.firebase.setVal({
+                    id: e.stateNode.props.client.hostId,
+                    path: 'c/' + e.stateNode.props.client.name + '/d',
+                    val: Number(parseFloat(prompt('How much defense do you want?')))
+                });
+
+                alert('Defense set!');
+            };
+})();
+
+
+function footer() {
+    let element = document.createElement('div');
+
+    element.style = `font-family: "Nunito", sans-serif; font-size: 14px; height: 65px; width: 175px; border: 4px solid rgb(15, 15, 15); background: rgb(240, 240, 240); position: absolute; top: 20x; left: 20px; border-radius: 10px; color: rgb(0, 0, 0); text-align: center;`;
+    element.innerHTML = `<p>Made by Stone6142</p>`;
+    document.body.appendChild(element);
+
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    element.onmousedown = ((e = window.event) => {
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = (() => {
+            document.onmouseup = null;
+            document.onmousemove = null;
+        });
+        document.onmousemove = ((e) => {
+            e = e || window.event;
+            e.preventDefault();
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            let top = (element.offsetTop - pos2) > 0 ? (element.offsetTop - pos2) : 0;
+            let left = (element.offsetLeft - pos1) > 0 ? (element.offsetLeft - pos1) : 0;
+            element.style.top = top + "px";
+            element.style.left = left + "px";
+        });
+    });
+};
+
+footer();
+</textarea>
+<textarea id="rushsbloocks">
+(async () => {
+    let n = document.createElement('iframe');
+    document.body.append(n);
+    window.alert = n.contentWindow.alert.bind(window);
+    window.prompt = n.contentWindow.prompt.bind(window);
+    window.confirm = n.contentWindow.confirm.bind(window);
+    n.remove();
+            function reactHandler() {
+                return Object.values(document.querySelector('#app > div > div'))[1].children[1]._owner;
+            };
+
+            if (window.location.pathname != '/play/rush') {
+                alert('You must be in a blook rush game mode to use this hack!');
+            } else {
+                let e = reactHandler();
+                e.stateNode.props.firebase.setVal({
+                    id: e.stateNode.props.client.hostId,
+                    path: 'c/' + e.stateNode.props.client.name + '/bs',
+                    val: Number(parseFloat(prompt('How many blooks do you want?')))
+                });
+
+                alert('Blooks set!');
+            };
+})();
+
+
+function footer() {
+    let element = document.createElement('div');
+
+    element.style = `font-family: "Nunito", sans-serif; font-size: 14px; height: 65px; width: 175px; border: 4px solid rgb(15, 15, 15); background: rgb(240, 240, 240); position: absolute; top: 20x; left: 20px; border-radius: 10px; color: rgb(0, 0, 0); text-align: center;`;
+    element.innerHTML = `<p>Made by Stone6142</p>`;
+    document.body.appendChild(element);
+
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    element.onmousedown = ((e = window.event) => {
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = (() => {
+            document.onmouseup = null;
+            document.onmousemove = null;
+        });
+        document.onmousemove = ((e) => {
+            e = e || window.event;
+            e.preventDefault();
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            let top = (element.offsetTop - pos2) > 0 ? (element.offsetTop - pos2) : 0;
+            let left = (element.offsetLeft - pos1) > 0 ? (element.offsetLeft - pos1) : 0;
+            element.style.top = top + "px";
+            element.style.left = left + "px";
+        });
+    });
+};
+
+footer();
+</textarea>
+</div>
+<body style="background-color: #808080">
+  <h1 style="color:#F7F7FF;"><strong>Blooket Hacks</strong></h1>
+  <a onclick="goldesp()"><button class="button button1">Gold Chest ESP</button></a>
+  <a onclick="goldsetgold()"><br><button class="button button1">Gold Set Player Gold</button></a>
+  <a onclick="fishlure()"><br><button class="button button1">Fishing frenzy Set Lure</button></a>
+  <a onclick="fishweight()"><br><button class="button button1">Fishing frenzy Set Weight</button></a>
+  <a onclick="cafeinifood()"><br><button class="button button1">Cafe infinite Food</button></a>
+  <a onclick="cafescash()"><br><button class="button button1">Cafe Set Cash</button></a>
+  <a onclick="cryptosmoney()"><br><button class="button button1">Crypto Set Crypto</button></a>
+  <a onclick="deceptive-dinos()"><br><button class="button button1">Deceptive Dinos set Fossils</button></a>
+  <a onclick="rushsdef()"><br><button class="button button1">Rush Set Defense</button></a>
+  <a onclick="rushsblocks()"><br><button class="button button1">Rush Set Blooks</button></a>
+</body>
+</head>
+</div>
+<div class="sidenav">
+  <a href="../">Dashboard</a>
+  <a href="../broken/">Broken</a>
+  <a href="../downloads/">Downloads</a>
+  <a href="../tools/"><strong>Tools</strong></a>
+  <a href="https://docs.google.com/document/d/1uBznNAbuVtK9Wl2lWTup7WhFuLdnNVY7EapjC0f6CFU/edit?usp=sharing">Info</a>
+  <a href="../chat/">Chat</a>
+  <a href="../extra/challenges/">Extra Crap</a>
+</div>
+<div class=foo><a href="../extra/release/">3.3v </a></div>
+</html>
+<script>
+  const floating_btn = document.querySelector('.floating-btn');
+const close_btn = document.querySelector('.close-btn');
+const social_panel_container = document.querySelector(
+	'.social-panel-container'
+);
+
+floating_btn.addEventListener('click', () => {
+	social_panel_container.classList.toggle('visible');
+});
+
+close_btn.addEventListener('click', () => {
+	social_panel_container.classList.remove('visible');
+    	
+});
+</script>
+<script>
+	function goldesp() {
+	let goldespc = document.getElementById("goldesp1").value;
+	navigator.clipboard.writeText(goldespc);
+	};
+	function goldsetgold() {
+	let goldset = document.getElementById("goldsetplayer1").value;
+	navigator.clipboard.writeText(goldset);
+	};
+	function fishlure() {
+	let fishlure = document.getElementById("fishlure1").value;
+	navigator.clipboard.writeText(fishlure);
+	};
+	function fishweight() {
+	let fishweight = document.getElementById("fishweight").value;
+	navigator.clipboard.writeText(fishweight);
+	};
+	function cafeinifood() {
+	let cafeinifood = document.getElementById("cafeinifood").value;
+	navigator.clipboard.writeText(cafeinifood);
+	};
+	function cafescash() {
+	let cafescash = document.getElementById("cafescash").value;
+	navigator.clipboard.writeText(cafescash);
+	};
+	function cryptosmoney() {
+	let cryptosmoney = document.getElementById("cryptosmoney").value;
+	navigator.clipboard.writeText();
+	};
+	function deceptive-dinos() {
+	let deceptive-dinos = document.getElementById("deceptive-dinos").value;
+	navigator.clipboard.writeText(deceptive-dinos);
+	};
+	function rushsdef() {
+	let rushsdef = document.getElementById("rushsdef").value;
+	navigator.clipboard.writeText(rushsdef);
+	};
+	function rushsblocks() {
+	let rushsblocks = document.getElementById("rushsblocks").value;
+	navigator.clipboard.writeText(rushsblocks);
+	}
+</script>
+<script src="https://kit.fontawesome.com/5df9058d00.js" crossorigin="anonymous"></script>
