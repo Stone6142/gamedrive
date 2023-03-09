@@ -56,7 +56,7 @@ function WordSearchController(gameId, listId, solveId, newGameId, instructionsId
 		"Dog Breeds": [["Affenpinscher", "Pit Bull", "Corkie", "Dachshund"],
 			["Eskimo Dog", "Saint Bernard", "Boxer", "Great Dane"],
 			["Golden Retriever", "Bloodhound", "Husky", "Aidi"],
-			["Huskydoodle", "Mastiff", "Bulldog", "Rottweiler"],
+			["Komondor", "Mastiff", "Bulldog", "Rottweiler"],
 			["Pointer", "Pug", "Shiba Inu", "German Shepherd"]]
 
 	};
