@@ -13,7 +13,7 @@ function validate() {
     alert("Login successfully");
     window.location = "../logins1/cp08d8420f-0eb5-4caf-b841-ce3b5fe68ce4"; // Redirecting to other page.
     return false;
-  } else if (username == "Cale" && password == "MjUwOA==) {
+  } else if (username == "Cale" && password == "MjUwOA==") {
     alert("Login successfully");
     window.location = "../logins1/cj8e84061b-83d5-4c33-a499-c2118f22686c"; // Redirecting to other page.
     return false;
