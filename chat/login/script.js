@@ -2,11 +2,10 @@ require('dotenv').config();
 var attempt = 3; // Variable to count number of attempts.
 // Below function Executes on click of login button.
 function validate() {
-  var username1 = document.getElementById("username").value;
+  var username = document.getElementById("username").value;
   var password1 = document.getElementById("password").value;
-  var username = btoa(username1);
   var password = btoa(password1);
-  if (username == "U2t5bGVy" && password == "MTgzNjA=") {
+  if (username == "Skyler" && password == "MTgzNjA=") {
     alert("Login successfully");
     window.location = "../logins1/me75f1f49c-0211-4337-a364-b7602ec38ea3/"; // Redirecting to other page.
     return false;
