@@ -53,11 +53,18 @@ function WordSearchController(gameId, listId, solveId, newGameId, instructionsId
 			["Maine Coon", "Devon Rex", "Charteux", "Scottish Fold"],
 			["Himalayan", "Ragamuffin", "Bombay", "Siberian"],
 			["Egyptian Mau", "Norwegian Forest Cat", "Abyssinian", "York Chocolate"]],
+		
 		"Dog Breeds": [["Affenpinscher", "Pit Bull", "Corkie", "Dachshund"],
 			["Eskimo Dog", "Saint Bernard", "Boxer", "Great Dane"],
 			["Golden Retriever", "Bloodhound", "Husky", "Aidi"],
 			["Komondor", "Mastiff", "Bulldog", "Rottweiler"],
-			["Pointer", "Pug", "Shiba Inu", "German Shepherd"]]
+			["Pointer", "Pug", "Shiba Inu", "German Shepherd"]],
+		"School Subject": [["Reading", "English", "Math", "Science"],
+				   
+			["Social Studys", "PLTW", "Art", "Gym"],
+			["Health", "Facts", "Band", "Orchestra"],
+			["Spanish", "Tech", "Lunch", "SI"],
+			["Homeroom",  "German",  "Carpendery", "Enrichment"]]
 
 	};
 
