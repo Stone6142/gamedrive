@@ -2,25 +2,24 @@ require('dotenv').config();
 var attempt = 3; // Variable to count number of attempts.
 // Below function Executes on click of login button.
 function validate() {
-  var username1 = document.getElementById("username").value;
+  var username = document.getElementById("username").value;
   var password1 = document.getElementById("password").value;
-  var username = btoa(username1);
   var password = btoa(password1);
-  if (username == "U2t5bGVy" && password == "MTgzNjA=") {
+  if (username == "Skyler" && password == "MTgzNjA=") {
     alert("Login successfully");
-    window.location = "../dashboard"; // Redirecting to other page.
+    window.location = "../dashhboard/"; // Redirecting to other page.
     return false;
-  } else if (username == "Corbyn" && password == "2535") {
+  } else if (username == "Corbyn" && password == "MjUzNQ==") {
     alert("Login successfully");
-    window.location = "../dashboard"; // Redirecting to other page.
+    window.location = "../dashhboard/"; // Redirecting to other page.
     return false;
-  } else if (username == "Cale" && password == "2508") {
+  } else if (username == "Cale" && password == "MjUwOA==") {
     alert("Login successfully");
-    window.location = "../dashboard"; // Redirecting to other page.
+    window.location = "../dashhboard/"; // Redirecting to other page.
     return false;
-  } else if (username == "bp" && password == "poopeater331") {
+  } else if (username == "bp" && password == "cG9vcGVhdGVyMzMx") {
     alert("Login successfully");
-    window.location = "../dashboard"; // Redirecting to other page.
+    window.location = "../dashhboard/"; // Redirecting to other page.
     return false;
   } //else if (username == "aj" && password == "Sd4.life") {
     //alert("Login successfully");
