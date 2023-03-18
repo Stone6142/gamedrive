@@ -270,7 +270,7 @@ ul li:last-child::after
 }
 .social-panel-container1 {
     position: fixed;
-    right: 0;
+    right: 2;
     bottom: 80px;
     z-index: 2; /* Stay on top */
     top: 2; /* Stay at the top */
