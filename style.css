@@ -272,8 +272,6 @@ ul li:last-child::after
     position: fixed;
     right: 0;
     bottom: 80px;
-    transform: translateX(100%);
-    transition: transform 0.4s ease-in-out;
     z-index: 2; /* Stay on top */
     top: 2; /* Stay at the top */
 }
