@@ -38,7 +38,7 @@ document.addEventListener('keydown', function(e) {
 });
 
 function activateCheats() {
-  document.body.style.backgroundImage = "url('yes.gif')";
+  document.body.style.backgroundImage = "url('yes1.gif')";
 
   var audio = new Audio('Recording (9).m4a');
   audio.play();
