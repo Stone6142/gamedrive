@@ -5,6 +5,15 @@ document.addEventListener("keypress", function(event) {
     
   }
 });
+// Select elements here
+const video = document.getElementById('myvideo');
+const videoControls = document.getElementById('video-controls');
+
+const videoWorks = !!document.createElement('myvideo').canPlayType;
+if (videoWorks) {
+  video.controls = false;
+  videoControls.classList.remove('hidden');
+}
 function openFullscreen() {
   document.getElementById('myvideo').style.visibility = 'visible';
   if (document.getElementById('myvideo').requestFullscreen) {
