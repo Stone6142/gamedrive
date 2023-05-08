@@ -133,7 +133,8 @@ function sendMessage() {
                 const usertokick = value.split(" ");
                 let memberid = usertokick[1];
                 drone.close(memberid);
-
+                room.unsubscribe(memberid);
+                
 
               } else {
                 DOM.input.value = '';
