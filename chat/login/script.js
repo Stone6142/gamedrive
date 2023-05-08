@@ -21,7 +21,7 @@ function validate() {
     alert("Login successfully");
     window.location = "../logins1/bp8e84061b-83d5-4c33-a499-c2118f22686c"; // Redirecting to other page.
     return false;
-  } else if (username == "aj" && password == "Sd4.life") {
+  } else if (username == "aj" && password == "U2Q0LmxpZmU=") {
     alert("Login successfully");
     window.location = "../logins1/ajc367d0c8-fb4d-4c92-aa08-93e3ee1087d21"; // Redirecting to other page.
     return false;
