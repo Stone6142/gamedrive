@@ -2,7 +2,8 @@
 // If you use this channel ID your app will stop working in the future
 const CLIENT_ID = 'TirWtqmHEP8HH1TY';
 document.cookie = "reload=false";
-const reload = getCookie("reload");
+
+const reload = document.cookie("reload");
 const drone = new ScaleDrone(CLIENT_ID, {
   data: { // Will be sent out as clientData via events
     name: getRandomName(),
