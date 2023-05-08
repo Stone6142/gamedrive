@@ -128,12 +128,8 @@ function sendMessage() {
                 message: 'type /jesuschrist',
               })
             } else {
-              if (value === '/kick') {
-                DOM.input.value = '';
-                const usertokick = value.split(" ");
-                let memberid = usertokick[1];
-                drone.close(memberid);
-                room.unsubscribe(memberid);
+              if (value == '/hide ') {
+                DOM.input.value = '';              
                 
 
               } else {
