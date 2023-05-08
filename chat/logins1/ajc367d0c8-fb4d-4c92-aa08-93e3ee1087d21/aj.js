@@ -82,7 +82,12 @@ DOM.form.addEventListener('submit', sendMessage);
 
 function sendMessage() {
   const value = DOM.input.value;
+  let result = value.includes("Klu Klux Klan");
   if (value === '') {
+    return;
+  }
+  if (result == true) {
+    alert("No No Term");
     return;
   }
   if (value === '/happy') {
