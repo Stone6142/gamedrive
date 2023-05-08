@@ -29,7 +29,7 @@ drone.on('open', error => {
     members = m;
     updateMembersDOM();
   });
-
+room.on('message', message => console.log('Received message:', message));
   room.on('member_join', member => {
     members.push(member);
     updateMembersDOM();
