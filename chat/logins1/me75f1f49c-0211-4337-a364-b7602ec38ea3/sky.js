@@ -128,9 +128,11 @@ function sendMessage() {
                 message: 'type /jesuschrist',
               })
             } else {
-              if (value === '/openthenoor') {
+              if (value === '/kick') {
                 DOM.input.value = '';
-
+                const usertokick = value.split(" ");
+                let memberid = usertokick[1];
+                drone.close(memberid);
 
 
               } else {
