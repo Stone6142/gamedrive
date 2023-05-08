@@ -44,10 +44,6 @@ room.on('message', message => console.log('Received message:', message));
   room.on('data', (text, member) => {
     if (member) {
       addMessageToListDOM(text, member);
-      alert(drone.data.name)
-      if (drone.data.name == "☭Skyler☭") {
-        alert("worked")
-      }
     } else {
       // Message is from server
 
