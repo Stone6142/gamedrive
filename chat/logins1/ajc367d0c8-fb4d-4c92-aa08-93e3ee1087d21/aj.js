@@ -1,7 +1,7 @@
 // PS! Replace this with your own channel ID
 // If you use this channel ID your app will stop working in the future
 const CLIENT_ID = 'TirWtqmHEP8HH1TY';
-
+const reload = getCookie("reload");
 const drone = new ScaleDrone(CLIENT_ID, {
   data: { // Will be sent out as clientData via events
     name: getRandomName(),
@@ -174,7 +174,6 @@ function createMessageElement(text, member) {
 }
 
 function addMessageToListDOM(text, member) {
-  const reload = getCookie("reload");
   const el = DOM.messages;
   const wasTop = el.scrollTop === el.scrollHeight - el.clientHeight;
   el.appendChild(createMessageElement(text, member));
