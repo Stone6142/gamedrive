@@ -79,7 +79,7 @@ const DOM = {
 };
 
 DOM.form.addEventListener('submit', sendMessage);
-const nowords = ["Klu Klux Klan", "White Power"];
+const nowords = ["Klu Klux Klan", "White Power", "nigger"];
 function sendMessage() {
   const value = DOM.input.value;
   let result = value.includes(nowords);
