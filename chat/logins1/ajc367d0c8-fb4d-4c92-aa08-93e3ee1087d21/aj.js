@@ -10,7 +10,10 @@ const drone = new ScaleDrone(CLIENT_ID, {
 });
 
 let members = [];
-
+if (reload == true){
+  document.cookie = "reload=false"
+  reload();
+}
 drone.on('open', error => {
   if (error) {
     return console.error(error);
@@ -171,6 +174,7 @@ function createMessageElement(text, member) {
 }
 
 function addMessageToListDOM(text, member) {
+  const reload = getCookie("reload");
   const el = DOM.messages;
   const wasTop = el.scrollTop === el.scrollHeight - el.clientHeight;
   el.appendChild(createMessageElement(text, member));
