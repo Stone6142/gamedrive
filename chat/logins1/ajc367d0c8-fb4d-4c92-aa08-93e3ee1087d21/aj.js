@@ -79,15 +79,16 @@ const DOM = {
 };
 
 DOM.form.addEventListener('submit', sendMessage);
-
+const nowords = ["Klu Klux Klan", "White Power"]
 function sendMessage() {
   const value = DOM.input.value;
-  let result = value.includes("Klu Klux Klan");
+  let result = value.includes(nowords);
   if (value === '') {
     return;
   }
   if (result == true) {
     alert("No No Term");
+    DOM.input.value = '';
     return;
   }
   if (value === '/happy') {
