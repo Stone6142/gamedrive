@@ -1,9 +1,7 @@
 // PS! Replace this with your own channel ID
 // If you use this channel ID your app will stop working in the future
 const CLIENT_ID = 'TirWtqmHEP8HH1TY';
-document.cookie = "reload=false";
 
-const reload = document.cookie("reload");
 const drone = new ScaleDrone(CLIENT_ID, {
   data: { // Will be sent out as clientData via events
     name: getRandomName(),
@@ -12,10 +10,7 @@ const drone = new ScaleDrone(CLIENT_ID, {
 });
 
 let members = [];
-if (reload == true){
-  document.cookie = "reload=false"
-  reload();
-}
+
 drone.on('open', error => {
   if (error) {
     return console.error(error);
