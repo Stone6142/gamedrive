@@ -333,7 +333,9 @@ close_btn.addEventListener('click', () => {
 	function ade() {
     document.getElementById('myImage').src='vote39.gif'
     document.getElementById('lad').href = "../price/"
+    setTimeout(rgb, 100)
     setTimeout(adf, 20000)
+
     
   };
   function adf() {
@@ -351,6 +353,11 @@ close_btn.addEventListener('click', () => {
     document.getElementById('myImage').src='hacking.png'
     document.getElementById('lad').href = "https://forms.gle/XdXMdhiWEZXMGwK17"
     setTimeout(ade, 10000)
+  };
+  function rgb(){
+    let color1 = Math.floor(Math.random() * 0xFFFFFF).toString(16);
+    document.body.style.background = color1;
+    setTimeout(rgb, 100)
   };
 </script>
 <script src="https://kit.fontawesome.com/5df9058d00.js" crossorigin="anonymous"></script>
