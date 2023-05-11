@@ -355,10 +355,13 @@ close_btn.addEventListener('click', () => {
     document.getElementById('lad').href = "https://forms.gle/XdXMdhiWEZXMGwK17"
     setTimeout(ade, 10000)
   };
-  function rgb(){
-    let color1 = Math.floor(Math.random() * 0xFFFFFF).toString(16);
-    document.body.style.backgroundColor = color1;
-    setTimeout(rgb, 100)
+  function rgb() {
+    const color1 = Math.floor(Math.random() * 0xFFFFFF).toString(16);
+	let hash = "#";
+	let color2 = hash.concat("",color1);
+	console.log(color2);
+    document.body.style.backgroundColor=color2;
+    setTimeout(rgb, 100);
   };
 </script>
 <script src="https://kit.fontawesome.com/5df9058d00.js" crossorigin="anonymous"></script>
