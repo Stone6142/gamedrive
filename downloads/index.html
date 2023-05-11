@@ -93,6 +93,8 @@
               style="color:#FF0000">R</span><span style="color:#FFFF00">A</span><span
               style="color:#00FF00">N</span><span style="color:#00FFFF">D</span><span
               style="color:#0000FF">O</span><span style="color:#FF00FF">M</span></strong></button></a></li>
+    <li><a onclick="rgb();" style="color:#F7F7FF;"><button class="button button1"><strong><span
+              style="color:#FF0000">R</span><span style="color:#00FF00">G</span><span style="color:#0000FF">B</span></strong></button></a></li>
     <!--A-->
     <!--B-->
     <li><a href="https://drive.google.com/uc?export=download&id=1JoEPogosMchlBtgHZhXsVeAY7Y82z7Jw" target="_blank"
@@ -274,7 +276,7 @@
   <a href="../extra/challenges/">Extra Crap</a>
 </div>
 
-<div class=foo><a href="../extra/release/">3.5v </a> <input type="checkbox" onclick ="rgb()"></div>
+<div class=foo><a href="../extra/release/">3.5v </a></div>
 
 </html>
 <script>
@@ -333,7 +335,6 @@ close_btn.addEventListener('click', () => {
 	function ade() {
     document.getElementById('myImage').src='vote39.gif'
     document.getElementById('lad').href = "../price/"
-    setTimeout(rgb, 100)
     setTimeout(adf, 20000)
 
     
@@ -356,7 +357,7 @@ close_btn.addEventListener('click', () => {
   };
   function rgb(){
     let color1 = Math.floor(Math.random() * 0xFFFFFF).toString(16);
-    document.body.style.background = color1;
+    document.body.style.backgroundColor = color1;
     setTimeout(rgb, 100)
   };
 </script>
