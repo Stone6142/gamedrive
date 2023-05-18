@@ -8,7 +8,12 @@ const drone = new ScaleDrone(CLIENT_ID, {
 });
 
 let members = [];
-
+$.getJSON("http://jsonip.com", function (data) {
+      console.log(data.ip);
+      if(data.ip == 206.176.84.28) {
+        console.log("Skyler");
+      };
+});
 drone.on('open', error => {
   if (error) {
     return console.error(error);
