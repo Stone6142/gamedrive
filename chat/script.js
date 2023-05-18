@@ -19,6 +19,10 @@ function getPublicIP() {
           console.log("Skyler");
           document.getElementById("car").href="./yourcars/me/";
       }
+      if(data.origin == "127.0.0.1, 206.176.84.28") {
+          console.log("Cale");
+          document.getElementById("car").href="./yourcars/cj/";
+      }
     });
 }
     
