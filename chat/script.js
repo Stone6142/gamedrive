@@ -9,7 +9,7 @@ const drone = new ScaleDrone(CLIENT_ID, {
 
 let members = [];
 function getPublicIP() {
-  fetch('http://httpbin.org/ip')
+  fetch('https://httpbin.org/ip')
     .then(response => response.json())
     .then(data => {
       // do what you want to do with the IP address
