@@ -9,8 +9,6 @@ const drone = new ScaleDrone(CLIENT_ID, {
 
 let members = [];
 function getPublicIP() {
-  var x = document.getElementById("car");
-  x.style.display = "none";
   fetch('https://httpbin.org/ip')
     .then(response => response.json())
     .then(data => {
@@ -19,7 +17,7 @@ function getPublicIP() {
       console.log(data.origin);
       if(data.origin == "127.0.0.1, 206.176.84.28") {
           console.log("Skyler");
-          
+          var x = document.getElementById("car");
           x.style.display = "block";
       };
     });
