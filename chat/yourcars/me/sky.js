@@ -4,8 +4,8 @@ const CLIENT_ID = 'bgONY5HPC4DCLumW';
 
 const drone = new ScaleDrone(CLIENT_ID, {
   data: { // Will be sent out as clientData via events
-    name: getRandomName(),
-    color: getRandomColor(),
+    name:"☭Skyler☭",
+    color: '#FF69B4',
   },
 });
 
@@ -60,13 +60,6 @@ drone.on('error', error => {
   console.error(error);
 });
 
-function getRandomName() {
-  return "☭Skyler☭";
-}
-
-function getRandomColor() {
-  return '#FF69B4';
-}
 
 //------------- DOM STUFF
 
