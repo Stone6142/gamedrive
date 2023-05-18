@@ -18,9 +18,9 @@ function getPublicIP() {
       if(data.origin == "127.0.0.1, 206.176.84.28") {
           console.log("Skyler");
         //document.getElementById("car").href="./yourcar/me.html";
-      };
+      }
     });
-};
+}
     
 getPublicIP();
 
