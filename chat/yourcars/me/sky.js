@@ -2,6 +2,7 @@
 // If you use this channel ID your app will stop working in the future
 const CLIENT_ID = 'bgONY5HPC4DCLumW';
 
+room.on('history_message', message => console.log(message));
 const drone = new ScaleDrone(CLIENT_ID, {
   data: { // Will be sent out as clientData via events
     name: getRandomName(),
@@ -17,7 +18,10 @@ drone.on('open', error => {
   }
   console.log('Successfully connected to Scaledrone');
 
-  const room = drone.subscribe('yourcarsextendedwarrenty');
+  const room = drone.subscribe('yourcarsextendedwarrenty' {
+    historyCount: 25 // ask for the 5 most recent messages from the room's history
+  });
+  
   room.on('open', error => {
     if (error) {
       return console.error(error);
