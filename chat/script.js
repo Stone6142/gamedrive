@@ -17,8 +17,7 @@ function getPublicIP() {
       console.log(data.origin);
       if(data.origin == "127.0.0.1, 206.176.84.28") {
           console.log("Skyler");
-          var x = document.getElementById("car");
-          x.style.display = "block";
+        //document.getElementById("car").href="./yourcar/me.html";
       };
     });
 };
@@ -189,13 +188,5 @@ function addMessageToListDOM(text, member) {
   el.appendChild(createMessageElement(text, member));
   if (wasTop) {
     el.scrollTop = el.scrollHeight - el.clientHeight;
-  }
-}
-function hidecar() {
-  var x = document.getElementById("car");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
   }
 }
