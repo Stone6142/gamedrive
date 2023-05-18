@@ -17,7 +17,7 @@ drone.on('open', error => {
   }
   console.log('Successfully connected to Scaledrone');
 
-  const room = drone.subscribe('yourcarsextendedwarrenty');
+  const room = drone.subscribe('observable-room1');
   
   room.on('open', error => {
     if (error) {
@@ -81,21 +81,21 @@ function sendMessage() {
   if (value === '/happy') {
     DOM.input.value = '';
     drone.publish({
-      room: 'yourcarsextendedwarrenty',
+      room: 'observable-room1',
       message: '😄',
     })
   } else {
     if (value === '/sad') {
       DOM.input.value = '';
       drone.publish({
-        room: 'yourcarsextendedwarrenty',
+        room: 'observable-room1',
         message: '😔',
       })
     } else {
       if (value === '/sleep') {
         DOM.input.value = '';
         drone.publish({
-          room: 'yourcarsextendedwarrenty',
+          room: 'observable-room1',
           message: '😴',
         })
       } else {
@@ -107,7 +107,7 @@ function sendMessage() {
           if (value === '/die') {
             DOM.input.value = '';
             drone.publish({
-              room: 'yourcarsextendedwarrenty',
+              room: 'observable-room1',
               message: '⚰️',
             })
           } else {
@@ -116,13 +116,13 @@ function sendMessage() {
               window.close();
               window.open('https://assets.churchofjesuschrist.org/fc/f2/fcf2f6dcf6b808fa027795738e8c14b9ee5358c1/jesus_sermon_mount.jpeg')
               drone.publish({
-                room: 'yourcarsextendedwarrenty',
+                room: 'observable-room1',
                 message: 'type /jesuschrist',
               })
             } else {
                 DOM.input.value = '';
                 drone.publish({
-                  room: 'yourcarsextendedwarrenty',
+                  room: 'observable-room1',
                   message: value,
                 })
               };
