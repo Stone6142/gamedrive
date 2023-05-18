@@ -8,13 +8,20 @@ const drone = new ScaleDrone(CLIENT_ID, {
 });
 
 let members = [];
-$.getJSON("https://api.ipify.org?format=json", function(data) {
-         
-        // Setting text of element P with id gfg
-        if(data.ip == "206.176.84.28") {
-        console.log("Skyler");
+function getPublicIP() {
+  fetch('http://httpbin.org/ip')
+    .then(response => response.json())
+    .then(data => {
+      // do what you want to do with the IP address
+      // ... eg. log it to the console
+      console.log(data.origin);
+      if(data.origin == "127.0.0.1, 206.176.84.28") {
+          console.log("Skyler");
       };
-    })
+    });
+}
+    
+getPublicIP()
 drone.on('open', error => {
   if (error) {
     return console.error(error);
