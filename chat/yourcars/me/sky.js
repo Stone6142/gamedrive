@@ -2,7 +2,6 @@
 // If you use this channel ID your app will stop working in the future
 const CLIENT_ID = 'bgONY5HPC4DCLumW';
 
-room.on('history_message', message => console.log(message));
 const drone = new ScaleDrone(CLIENT_ID, {
   data: { // Will be sent out as clientData via events
     name: getRandomName(),
