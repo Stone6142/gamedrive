@@ -18,9 +18,7 @@ drone.on('open', error => {
   }
   console.log('Successfully connected to Scaledrone');
 
-  const room = drone.subscribe('yourcarsextendedwarrenty' {
-    historyCount: 25 // ask for the 5 most recent messages from the room's history
-  });
+  const room = drone.subscribe('yourcarsextendedwarrenty');
   
   room.on('open', error => {
     if (error) {
