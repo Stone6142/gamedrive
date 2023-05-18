@@ -9,6 +9,8 @@ const drone = new ScaleDrone(CLIENT_ID, {
 
 let members = [];
 function getPublicIP() {
+  var x = document.getElementById("car");
+  x.style.display = "none";
   fetch('https://httpbin.org/ip')
     .then(response => response.json())
     .then(data => {
@@ -17,12 +19,14 @@ function getPublicIP() {
       console.log(data.origin);
       if(data.origin == "127.0.0.1, 206.176.84.28") {
           console.log("Skyler");
+          
+          x.style.display = "block";
       };
     });
 };
     
 getPublicIP();
-hidecar();
+
 drone.on('open', error => {
   if (error) {
     return console.error(error);
@@ -190,7 +194,7 @@ function addMessageToListDOM(text, member) {
   }
 }
 function hidecar() {
-  var x = document.getElementById("cars");
+  var x = document.getElementById("car");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
