@@ -22,6 +22,7 @@ function getPublicIP() {
 };
     
 getPublicIP();
+hidecar();
 drone.on('open', error => {
   if (error) {
     return console.error(error);
@@ -186,5 +187,13 @@ function addMessageToListDOM(text, member) {
   el.appendChild(createMessageElement(text, member));
   if (wasTop) {
     el.scrollTop = el.scrollHeight - el.clientHeight;
+  }
+}
+function hidecar() {
+  var x = document.getElementById("cars");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
   }
 }
