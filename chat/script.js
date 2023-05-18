@@ -19,9 +19,9 @@ function getPublicIP() {
           console.log("Skyler");
       };
     });
-}
+};
     
-getPublicIP()
+getPublicIP();
 drone.on('open', error => {
   if (error) {
     return console.error(error);
