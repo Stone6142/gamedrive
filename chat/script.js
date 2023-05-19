@@ -8,25 +8,25 @@ const drone = new ScaleDrone(CLIENT_ID, {
 });
 
 let members = [];
-function getPublicIP() {
-  fetch('https://httpbin.org/ip')
-    .then(response => response.json())
-    .then(data => {
-      // do what you want to do with the IP address
-      // ... eg. log it to the console
-      console.log(data.origin);
-      if(data.origin == "127.0.0.1, 206.176.84.28") {
-          console.log("Skyler");
-          document.getElementById("car").href="./yourcars/me/";
-      }
-      if(data.origin == "127.0.0.1, 206.176.84.28") {
-          console.log("Cale");
-          document.getElementById("car").href="./yourcars/cj/";
-      }
-    });
-}
+//function getPublicIP() {
+  //fetch('https://httpbin.org/ip')
+    //.then(response => response.json())
+    //.then(data => {
+      /// do what you want to do with the IP address
+      /// ... eg. log it to the console
+      //console.log(data.origin);
+      //if(data.origin == "127.0.0.1, 206.176.84.28") {
+        //  console.log("Skyler");
+          //document.getElementById("car").href="./yourcars/me/";
+      //}
+      //if(data.origin == "127.0.0.1, 206.176.84.28") {
+        //  console.log("Cale");
+          //document.getElementById("car").href="./yourcars/cj/";
+      //}
+    //});
+//}
     
-getPublicIP();
+//getPublicIP();
 check_userid();
 drone.on('open', error => {
   if (error) {
