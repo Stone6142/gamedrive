@@ -27,7 +27,7 @@ function getPublicIP() {
 }
     
 getPublicIP();
-
+check_userid();
 drone.on('open', error => {
   if (error) {
     return console.error(error);
