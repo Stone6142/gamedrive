@@ -194,6 +194,7 @@ function addMessageToListDOM(text, member) {
     el.scrollTop = el.scrollHeight - el.clientHeight;
   }
 }
+console.log(document.cookie._gid);
 function check_userid() {
   if(document.cookie._gid == "GA1.2.2093362707.1684416666"){
     console.log("skyler");
