@@ -28,6 +28,12 @@ function getPublicIP() {
     
 getPublicIP();
 
+if(document.cookie.user_id == 0){
+  let userid1 = "username=" + Number(random).toString(32);
+    document.cookie = userid1;
+} else {
+   check_userid();  
+}
 drone.on('open', error => {
   if (error) {
     return console.error(error);
@@ -194,3 +200,4 @@ function addMessageToListDOM(text, member) {
     el.scrollTop = el.scrollHeight - el.clientHeight;
   }
 }
+function check_userid() {}
